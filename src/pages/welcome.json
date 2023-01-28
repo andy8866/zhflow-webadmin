@@ -1,0 +1,21 @@
+{
+  "type": "page",
+  "title": "welcome",
+  "body": [
+    {
+      "type": "tpl",
+      "tpl": "这是你刚刚新增的页面。",
+      "inline": false,
+      "id": "u:352771b3c699"
+    }
+  ],
+  "id": "u:b3b7223fd5ad",
+  "asideResizor": false,
+  "pullRefresh": {
+    "disabled": true
+  },
+  "regions": [
+    "body",
+    "header"
+  ]
+}
