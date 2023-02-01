@@ -1,7 +1,5 @@
-
 // amis 环境配置
 import axios from "axios";
-import {toast} from "amis-ui";
 import {getToken} from "./utils/auth";
 
 // @ts-ignore
@@ -51,7 +49,7 @@ export const amisEnv = {
             const responseObj=JSON.parse(responseJson)
             if(responseObj.status==2){
                 setTimeout(()=>{
-                    // location.reload()
+                    location.reload()
                 },2500)
             }
 

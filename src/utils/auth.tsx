@@ -1,4 +1,3 @@
-import {env} from "../env";
 import {doHttp} from "./http";
 
 import appJson from '../pages/app.json';
@@ -17,7 +16,8 @@ async function validateToken(){
         return false;
     }
 
-    let response = await doHttp(env.url+'/api/admin/index/validateToken','GET',null,null);
+    // @ts-ignore
+    let response = await doHttp(import.meta.env.VITE_URL+'/api/admin/index/validateToken','GET',null,null);
     if(response.status!=0){
         localStorage.removeItem("token");
         return false;
