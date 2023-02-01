@@ -4,14 +4,13 @@ import axios from "axios";
 import {toast} from "amis-ui";
 import {getToken} from "./utils/auth";
 
-export const env={
-    url:'http://localhost:8081'
-    // url:'http://127.0.0.1:4523/m1/2172548-0-default'
-}
+// @ts-ignore
+console.log(import.meta.env)
 
 export const amisEnv = {
     replaceText:{
-      $url:env.url
+        // @ts-ignore
+        $url:import.meta.env.VITE_URL
     },
     // 下面三个接口必须实现
     fetcher: ({
@@ -27,7 +26,8 @@ export const amisEnv = {
 
         config = config || {};
 
-        config.baseURL=env.url;
+        // @ts-ignore
+        config.baseURL=import.meta.env.VITE_URL;
 
         config.withCredentials = true;
         responseType && (config.responseType = responseType);

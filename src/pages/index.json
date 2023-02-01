@@ -1,0 +1,11 @@
+{
+  "type": "app",
+  "brandName": "中流",
+  "pages": [
+    {
+      "label": "欢迎",
+      "url": "/",
+      "schemaApi": "get:/api/admin/page/getPage?pageName=welcome"
+    }
+  ]
+}
