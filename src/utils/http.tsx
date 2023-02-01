@@ -1,5 +1,4 @@
 import axios from "axios";
-import {env} from "../env";
 import {getToken} from "./auth";
 import {toast} from 'amis-ui';
 

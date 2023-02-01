@@ -3,9 +3,9 @@
   "brandName": "中流",
   "pages": [
     {
-      "label": "欢迎",
+      "label": "",
       "url": "/",
-      "schemaApi": "get:/api/admin/page/getPage?pageName=welcome"
+      "schema": "$welcomePage"
     }
   ]
 }
