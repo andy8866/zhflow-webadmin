@@ -62,10 +62,17 @@
               "className": "text-danger",
               "confirmText": "确定要删除？",
               "api": {
-                "method": "post",
-                "url": ""
+                "method": "get",
+                "url": "/api/admin/suggest/del?id=${id}"
               },
-              "id": "u:309f213d64a4"
+              "id": "u:309f213d64a4",
+              "onEvent": {
+                "click": {
+                  "weight": 0,
+                  "actions": [
+                  ]
+                }
+              }
             },
             {
               "label": "查看",
