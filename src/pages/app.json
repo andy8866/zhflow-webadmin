@@ -5,7 +5,14 @@
     {
       "label": "",
       "url": "/",
-      "schema": "$welcomePage"
+      "schema": "$welcomePage",
+      "children": [
+        {
+          "label": "客户意见",
+          "url": "/suggest",
+          "schema": "$suggestPage"
+        }
+      ]
     }
   ]
 }
