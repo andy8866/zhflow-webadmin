@@ -16,6 +16,11 @@
           "label": "应用管理",
           "url": "/appManage",
           "schema": "$appManage"
+        },
+        {
+          "label": "用户列表",
+          "url": "/userList",
+          "schema": "$userList"
         }
       ]
     }
