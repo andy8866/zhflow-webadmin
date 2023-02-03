@@ -49,7 +49,7 @@ export const amisEnv = {
             const responseObj=JSON.parse(responseJson)
             if(responseObj.status==2){
                 setTimeout(()=>{
-                    // location.reload()
+                    location.reload()
                 },2500)
             }
 
