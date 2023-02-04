@@ -1,0 +1,207 @@
+{
+  "type": "container",
+  "body": [
+    {
+      "type": "service",
+      "body": [
+        {
+          "type": "flex",
+          "className": "p-1",
+          "items": [
+            {
+              "type": "container",
+              "body": [
+                {
+                  "type": "tpl",
+                  "tpl": "${name||\"未选择应用\"}",
+                  "inline": false,
+                  "wrapperComponent": "",
+                  "id": "u:93c2c608b96f",
+                  "style": {
+                    "color": "#ffffff",
+                    "fontFamily": "",
+                    "fontSize": 12
+                  }
+                }
+              ],
+              "size": "xs",
+              "style": {
+                "position": "static",
+                "display": "block",
+                "flex": "1 1 auto",
+                "flexGrow": 1,
+                "flexBasis": "auto"
+              },
+              "wrapperBody": false,
+              "isFixedHeight": false,
+              "isFixedWidth": false,
+              "id": "u:b383bbc85210"
+            },
+            {
+              "type": "container",
+              "body": [
+                {
+                  "type": "button",
+                  "label": "切换应用",
+                  "onEvent": {
+                    "click": {
+                      "actions": [
+                        {
+                          "dialog": {
+                            "type": "dialog",
+                            "title": "选择应用",
+                            "body": [
+                              {
+                                "type": "service",
+                                "api": {
+                                  "method": "get",
+                                  "url": "/api/admin/app/getList",
+                                  "messages": {
+                                  }
+                                },
+                                "body": [
+                                  {
+                                    "type": "pagination-wrapper",
+                                    "id": "u:ced7bd6c5dd6",
+                                    "inputName": "items",
+                                    "outputName": "rows",
+                                    "perPage": 10,
+                                    "body": [
+                                      {
+                                        "type": "table",
+                                        "title": "",
+                                        "source": "${rows}",
+                                        "columns": [
+                                          {
+                                            "name": "id",
+                                            "label": "id",
+                                            "id": "u:c6b3632407ac",
+                                            "type": "text",
+                                            "placeholder": "-",
+                                            "toggled": false
+                                          },
+                                          {
+                                            "name": "name",
+                                            "label": "名称",
+                                            "id": "u:4e147b62cfde",
+                                            "type": "text",
+                                            "placeholder": "-",
+                                            "quickEdit": false
+                                          }
+                                        ],
+                                        "id": "u:afa698f75497",
+                                        "itemActions": [
+                                          {
+                                            "label": "选择",
+                                            "type": "button",
+                                            "onEvent": {
+                                              "click": {
+                                                "actions": [
+                                                  {
+                                                    "actionType": "ajax",
+                                                    "args": {
+                                                      "options": {
+                                                      },
+                                                      "api": {
+                                                        "url": "/api/admin/appUser/setSelectApp?appId=${id}",
+                                                        "method": "get",
+                                                        "messages": {
+                                                          "success": "选择成功"
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "outputVar": "responseResult",
+                                                    "actionType": "reload",
+                                                    "componentId": "u:effb373d875d",
+                                                    "data": null
+                                                  },
+                                                  {
+                                                    "args": {
+                                                    },
+                                                    "actionType": "closeDialog"
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          }
+                                        ],
+                                        "showHeader": true,
+                                        "affixHeader": true
+                                      }
+                                    ],
+                                    "position": "bottom"
+                                  }
+                                ],
+                                "id": "u:c85baf90e374",
+                                "messages": {
+                                }
+                              }
+                            ],
+                            "showCloseButton": true,
+                            "showErrorMsg": true,
+                            "showLoading": true,
+                            "id": "u:f7c06e435f24",
+                            "closeOnEsc": false,
+                            "dataMapSwitch": false,
+                            "actions": [
+                            ]
+                          },
+                          "actionType": "dialog"
+                        }
+                      ]
+                    }
+                  },
+                  "id": "u:e9eee39399b5",
+                  "size": "xs",
+                  "level": "enhance"
+                }
+              ],
+              "size": "xs",
+              "style": {
+                "position": "static",
+                "display": "block",
+                "flex": "1 1 auto",
+                "flexGrow": 1,
+                "flexBasis": "auto"
+              },
+              "wrapperBody": false,
+              "isFixedHeight": false,
+              "isFixedWidth": false,
+              "id": "u:8d3c0a08ec5a"
+            }
+          ],
+          "style": {
+            "position": "static",
+            "flexWrap": "nowrap",
+            "flex": "0 0 auto"
+          },
+          "direction": "row",
+          "justify": "center",
+          "alignItems": "center",
+          "id": "u:438e72941616",
+          "isFixedHeight": false
+        }
+      ],
+      "id": "u:effb373d875d",
+      "messages": {
+      },
+      "api": {
+        "url": "/api/admin/appUser/getSelectApp",
+        "method": "get"
+      }
+    }
+  ],
+  "style": {
+    "position": "static",
+    "display": "flex",
+    "flexDirection": "row",
+    "flexWrap": "nowrap",
+    "justifyContent": "center",
+    "alignItems": "center"
+  },
+  "id": "u:6bbf4569f23a",
+  "isFixedHeight": false,
+  "isFixedWidth": false
+}

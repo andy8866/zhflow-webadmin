@@ -1,14 +1,17 @@
-import app from "./app.json";
+import index from "./index.json";
 import welcome from "./welcome.json";
+import asideBefore from "./asideBefore.json";
 import suggest from "./suggest.json";
 import appManage from "./appManage.json";
 import userList from "./userList.json";
 
-export default function getAppJson(){
+export default function getIndexJson(){
     // @ts-ignore
-    let json= JSON.stringify(app)
-    json=json.replace(/"\$welcomePage"/g,JSON.stringify(welcome));
-    json=json.replace(/"\$suggestPage"/g,JSON.stringify(suggest));
+    let json= JSON.stringify(index)
+    json=json.replace(/"\$asideBefore"/g,JSON.stringify(asideBefore));
+
+    json=json.replace(/"\$welcome"/g,JSON.stringify(welcome));
+    json=json.replace(/"\$suggest"/g,JSON.stringify(suggest));
     json=json.replace(/"\$appManage"/g,JSON.stringify(appManage));
     json=json.replace(/"\$userList"/g,JSON.stringify(userList));
     // console.log(json)

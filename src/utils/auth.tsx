@@ -1,7 +1,7 @@
 import {doHttp} from "./http";
 
 import loginJson from '../pages/login.json';
-import getAppJson from "../pages/app";
+import getIndexJson from "../pages";
 
 export function getToken(){
     return localStorage.getItem("token");
@@ -28,7 +28,7 @@ async function validateToken(){
 export async function getPage(){
     const validateTokenR=await validateToken()
     if(validateTokenR){
-        return getAppJson()
+        return getIndexJson()
     }else{
         return loginJson
     }

@@ -1,16 +1,17 @@
 {
   "type": "app",
   "brandName": "中流",
+  "asideBefore": "$asideBefore",
   "pages": [
     {
       "label": "",
       "url": "/",
-      "schema": "$welcomePage",
+      "schema": "$welcome",
       "children": [
         {
           "label": "客户意见",
           "url": "/suggest",
-          "schema": "$suggestPage"
+          "schema": "$suggest"
         },
         {
           "label": "应用管理",
