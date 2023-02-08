@@ -22,6 +22,18 @@
           "label": "用户列表",
           "url": "/userList",
           "schema": "$userList"
+        },
+        {
+          "label": "应用功能",
+          "url": "/appMenu",
+          "redirect": "/appMenu/flowModel",
+          "children": [
+            {
+              "label": "流程管理",
+              "url": "/appMenu/flowModel",
+              "schema": "$flowModel"
+            }
+          ]
         }
       ]
     }

@@ -8,8 +8,12 @@ console.log(import.meta.env)
 export const amisEnv = {
     replaceText:{
         // @ts-ignore
-        $url:import.meta.env.VITE_URL
+        $url:import.meta.env.VITE_URL,
+        // @ts-ignore
+        $proccessDesignerUrl:import.meta.env.VITE_PROCESS_DESIGNER_URL,
+        $token:getToken()
     },
+    replaceTextKeys: ['url'],
     // 下面三个接口必须实现
     fetcher: ({
                   url, // 接口地址
@@ -23,6 +27,8 @@ export const amisEnv = {
         console.log("load ajax config")
 
         config = config || {};
+
+        console.log(config)
 
         // @ts-ignore
         config.baseURL=import.meta.env.VITE_URL;
