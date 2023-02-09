@@ -139,6 +139,40 @@
                   ]
                 }
               }
+            },
+            {
+              "type": "button",
+              "label": "部署",
+              "actionType": "",
+              "level": "link",
+              "className": "",
+              "confirmText": "",
+              "api": "get:/api/admin/flowModel/deploymentFlow?id=${id}",
+              "id": "u:54af0732fc5c",
+              "onEvent": {
+                "click": {
+                  "weight": 0,
+                  "actions": [
+                    {
+                      "args": {
+                        "options": {
+                        },
+                        "api": {
+                          "url": "/api/admin/flowModel/deploymentFlow?id=${id}",
+                          "method": "get",
+                          "messages": {
+                            "success": "部署成功"
+                          },
+                          "dataType": "json"
+                        }
+                      },
+                      "outputVar": "responseResult",
+                      "actionType": "ajax"
+                    }
+                  ]
+                }
+              },
+              "feedback": ""
             }
           ],
           "id": "u:3faed6044f7c",
