@@ -26,12 +26,22 @@
         {
           "label": "应用功能",
           "url": "/appMenu",
-          "redirect": "/appMenu/flowModel",
+          "redirect": "/appMenu/processModel",
           "children": [
             {
-              "label": "流程管理",
-              "url": "/appMenu/flowModel",
-              "schema": "$flowModel"
+              "label": "流程模型",
+              "url": "/appMenu/processModel",
+              "schema": "$processModel"
+            },
+            {
+              "label": "流程部署",
+              "url": "/appMenu/processDeployment",
+              "schema": "$processDeployment"
+            },
+            {
+              "label": "流程定义",
+              "url": "/appMenu/processDefinition",
+              "schema": "$processDefinition"
             }
           ]
         }

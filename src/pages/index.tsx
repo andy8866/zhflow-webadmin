@@ -4,7 +4,9 @@ import asideBefore from "./asideBefore.json";
 import suggest from "./suggest.json";
 import appManage from "./appManage.json";
 import userList from "./userList.json";
-import flowModel from "./flowModel.json";
+import processModel from "./processModel.json";
+import processDeployment from "./processDeployment.json";
+import processDefinition from "./processDefinition.json";
 
 export default function getIndexJson(){
     // @ts-ignore
@@ -15,7 +17,9 @@ export default function getIndexJson(){
     json=json.replace(/"\$suggest"/g,JSON.stringify(suggest));
     json=json.replace(/"\$appManage"/g,JSON.stringify(appManage));
     json=json.replace(/"\$userList"/g,JSON.stringify(userList));
-    json=json.replace(/"\$flowModel"/g,JSON.stringify(flowModel));
+    json=json.replace(/"\$processModel"/g,JSON.stringify(processModel));
+    json=json.replace(/"\$processDeployment"/g,JSON.stringify(processDeployment));
+    json=json.replace(/"\$processDefinition"/g,JSON.stringify(processDefinition));
 
     // console.log(json)
     return JSON.parse(json);

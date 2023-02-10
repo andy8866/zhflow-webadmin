@@ -8,7 +8,7 @@
       "syncLocation": false,
       "api": {
         "method": "get",
-        "url": "/api/admin/flowModel/getList",
+        "url": "/api/admin/processModel/getList",
         "messages": {
         }
       },
@@ -46,7 +46,7 @@
               "confirmText": "确定要删除？",
               "api": {
                 "method": "get",
-                "url": "/api/admin/flowModel/del?id=${id}"
+                "url": "/api/admin/processModel/del?id=${id}"
               },
               "id": "u:309f213d64a4",
               "onEvent": {
@@ -68,7 +68,7 @@
                 "body": [
                   {
                     "type": "form",
-                    "api": "post:/api/admin/flowModel/save",
+                    "api": "post:/api/admin/processModel/save",
                     "body": [
                       {
                         "name": "id",
@@ -101,7 +101,7 @@
                 "body": [
                   {
                     "type": "form",
-                    "api": "/api/admin/app/save",
+                    "api": "/api/admin/processModel/save",
                     "body": [
                       {
                         "name": "id",
@@ -147,7 +147,7 @@
               "level": "link",
               "className": "",
               "confirmText": "",
-              "api": "get:/api/admin/flowModel/deploymentFlow?id=${id}",
+              "api": "get:/api/admin/processModel/deploymentFlow?id=${id}",
               "id": "u:54af0732fc5c",
               "onEvent": {
                 "click": {
@@ -158,7 +158,7 @@
                         "options": {
                         },
                         "api": {
-                          "url": "/api/admin/flowModel/deploymentFlow?id=${id}",
+                          "url": "/api/admin/processModel/deploymentFlow?id=${id}",
                           "method": "get",
                           "messages": {
                             "success": "部署成功"
@@ -227,7 +227,7 @@
                 "type": "form",
                 "api": {
                   "method": "post",
-                  "url": "/api/admin/flowModel/save",
+                  "url": "/api/admin/processModel/save",
                   "messages": {
                   }
                 },
