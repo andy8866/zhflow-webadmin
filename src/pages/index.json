@@ -26,7 +26,6 @@
         {
           "label": "应用功能",
           "url": "/appMenu",
-          "redirect": "/appMenu/processModel",
           "children": [
             {
               "label": "流程模型",
