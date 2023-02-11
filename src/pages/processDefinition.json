@@ -47,18 +47,18 @@
           "id": "u:3d53063dd6d4"
         },
         {
-          "type": "status",
+          "type": "mapping",
           "label": "是否挂起",
-          "name": "isSuspended",
+          "name": "suspended",
           "id": "u:c05ce18aae11",
           "labelMap": [
             "正常",
             "挂起"
           ],
-          "map": [
-            "fas fa-check-circle",
-            "fas fa-times-circle"
-          ],
+          "map": {
+            "true": "挂起",
+            "false": "正常"
+          },
           "placeholder": "-"
         },
         {
@@ -76,7 +76,7 @@
                         "options": {
                         },
                         "api": {
-                          "url": "/api/admin/process/startProcess?processKey=${key}",
+                          "url": "/api/admin/processInstance/startProcess?processKey=${key}",
                           "method": "get",
                           "messages": {
                             "success": "启动成功"

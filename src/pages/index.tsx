@@ -7,6 +7,7 @@ import userList from "./userList.json";
 import processModel from "./processModel.json";
 import processDeployment from "./processDeployment.json";
 import processDefinition from "./processDefinition.json";
+import processInstance from "./processInstance.json";
 
 export default function getIndexJson(){
     // @ts-ignore
@@ -20,6 +21,7 @@ export default function getIndexJson(){
     json=json.replace(/"\$processModel"/g,JSON.stringify(processModel));
     json=json.replace(/"\$processDeployment"/g,JSON.stringify(processDeployment));
     json=json.replace(/"\$processDefinition"/g,JSON.stringify(processDefinition));
+    json=json.replace(/"\$processInstance"/g,JSON.stringify(processInstance));
 
     // console.log(json)
     return JSON.parse(json);

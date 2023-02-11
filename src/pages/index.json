@@ -41,6 +41,11 @@
               "label": "流程定义",
               "url": "/appMenu/processDefinition",
               "schema": "$processDefinition"
+            },
+            {
+              "label": "流程实例",
+              "url": "/appMenu/processInstance",
+              "schema": "$processInstance"
             }
           ]
         }
