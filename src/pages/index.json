@@ -46,6 +46,21 @@
               "label": "流程实例",
               "url": "/appMenu/processInstance",
               "schema": "$processInstance"
+            },
+            {
+              "label": "待办任务",
+              "url": "/appMenu/processAgendaTask",
+              "schema": "$processAgendaTask"
+            },
+            {
+              "label": "待领任务",
+              "url": "/appMenu/processClaimTask",
+              "schema": "$processClaimTask"
+            },
+            {
+              "label": "执行任务",
+              "url": "/appMenu/processTaskExecute",
+              "schema": "$processTaskExecute"
             }
           ]
         }
