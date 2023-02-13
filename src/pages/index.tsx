@@ -11,6 +11,8 @@ import processInstance from "./processInstance.json";
 import processAgendaTask from "./processAgendaTask.json";
 import processClaimTask from "./processClaimTask.json";
 import processTaskExecute from "./processTaskExecute.json";
+import processComplete from "./processComplete.json";
+import processTemplate from "./processTemplate.json";
 
 export default function getIndexJson(){
     // @ts-ignore
@@ -28,6 +30,8 @@ export default function getIndexJson(){
     json=json.replace(/"\$processAgendaTask"/g,JSON.stringify(processAgendaTask));
     json=json.replace(/"\$processClaimTask"/g,JSON.stringify(processClaimTask));
     json=json.replace(/"\$processTaskExecute"/g,JSON.stringify(processTaskExecute));
+    json=json.replace(/"\$processComplete"/g,JSON.stringify(processComplete));
+    json=json.replace(/"\$processTemplate"/g,JSON.stringify(processTemplate));
 
     // console.log(json)
     return JSON.parse(json);

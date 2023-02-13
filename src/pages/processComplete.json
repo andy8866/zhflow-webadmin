@@ -1,0 +1,109 @@
+{
+  "type": "page",
+  "title": "已完成流程",
+  "body": [
+    {
+      "type": "crud",
+      "id": "u:b97a31d176bc",
+      "syncLocation": false,
+      "api": {
+        "method": "get",
+        "url": "/api/admin/processHistory/getList",
+        "messages": {
+        }
+      },
+      "columns": [
+        {
+          "name": "id",
+          "label": "id",
+          "type": "text",
+          "id": "u:9f2a7afcffac",
+          "placeholder": "-",
+          "width": 300
+        },
+        {
+          "type": "text",
+          "label": "名称",
+          "name": "name",
+          "id": "u:665fe9a6a890"
+        },
+        {
+          "type": "text",
+          "label": "key",
+          "name": "processDefinitionKey",
+          "id": "u:e9732078881a"
+        },
+        {
+          "type": "date",
+          "label": "开始时间",
+          "name": "startTime",
+          "id": "u:3d53063dd6d4",
+          "format": "YYYY-MM-DD HH:mm:ss"
+        },
+        {
+          "type": "date",
+          "label": "完成时间",
+          "name": "endTime",
+          "id": "u:c05ce18aae11",
+          "labelMap": [
+            "正常",
+            "挂起"
+          ],
+          "map": {
+            "true": "挂起",
+            "false": "正常"
+          },
+          "placeholder": "-",
+          "format": "YYYY-MM-DD HH:mm:ss"
+        },
+        {
+          "type": "operation",
+          "label": "操作",
+          "buttons": [
+          ],
+          "id": "u:27d8ec268d90"
+        }
+      ],
+      "bulkActions": [
+      ],
+      "itemActions": [
+      ],
+      "features": [
+        "filter"
+      ],
+      "filterColumnCount": 3,
+      "perPageAvailable": [
+        10,
+        20,
+        50
+      ],
+      "messages": {
+      },
+      "perPage": 10,
+      "keepItemSelectionOnPageChange": false,
+      "footerToolbar": [
+        {
+          "type": "statistics"
+        },
+        {
+          "type": "switch-per-page",
+          "tpl": "内容",
+          "id": "u:f00cdfc70c8b"
+        },
+        {
+          "type": "pagination"
+        }
+      ],
+      "headerToolbar": [
+        "bulkActions"
+      ]
+    }
+  ],
+  "id": "u:3f9ab6253d4e",
+  "pullRefresh": {
+    "disabled": true
+  },
+  "regions": [
+    "body"
+  ]
+}

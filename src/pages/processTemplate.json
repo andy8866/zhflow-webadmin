@@ -1,0 +1,219 @@
+{
+  "type": "page",
+  "title": "流程模板",
+  "body": [
+    {
+      "type": "crud",
+      "id": "u:b97a31d176bc",
+      "syncLocation": false,
+      "api": {
+        "method": "get",
+        "url": "/api/admin/processTemplate/getList",
+        "messages": {
+        }
+      },
+      "columns": [
+        {
+          "name": "id",
+          "label": "id",
+          "type": "text",
+          "id": "u:9f2a7afcffac",
+          "placeholder": "-",
+          "width": 300
+        },
+        {
+          "type": "text",
+          "label": "名称",
+          "name": "name",
+          "id": "u:665fe9a6a890"
+        },
+        {
+          "type": "text",
+          "label": "分类",
+          "name": "catalog",
+          "id": "u:88b6603f46cf"
+        },
+        {
+          "type": "date",
+          "label": "创建时间",
+          "name": "createTime",
+          "id": "u:911d188c0041"
+        },
+        {
+          "type": "operation",
+          "label": "操作",
+          "buttons": [
+            {
+              "type": "button",
+              "label": "删除",
+              "actionType": "ajax",
+              "level": "link",
+              "className": "text-danger",
+              "confirmText": "确定要删除？",
+              "api": {
+                "method": "get",
+                "url": "/api/admin/processTemplate/del?id=${id}"
+              },
+              "id": "u:309f213d64a4",
+              "onEvent": {
+                "click": {
+                  "weight": 0,
+                  "actions": [
+                  ]
+                }
+              }
+            },
+            {
+              "label": "编辑",
+              "type": "button",
+              "actionType": "dialog",
+              "level": "link",
+              "dialog": {
+                "type": "dialog",
+                "title": "编辑",
+                "body": [
+                  {
+                    "type": "form",
+                    "api": "post:/api/admin/processTemplate/save",
+                    "body": [
+                      {
+                        "name": "id",
+                        "label": "id",
+                        "type": "input-text",
+                        "id": "u:9e3ef8bb07b0",
+                        "hidden": true
+                      },
+                      {
+                        "name": "name",
+                        "label": "名称",
+                        "type": "input-text",
+                        "id": "u:cbcc8adbd05b",
+                        "value": ""
+                      },
+                      {
+                        "name": "catalog",
+                        "label": "分类",
+                        "type": "input-text",
+                        "id": "u:f95d2535707f",
+                        "value": ""
+                      }
+                    ],
+                    "id": "u:f1a91c4986e1"
+                  }
+                ],
+                "id": "u:8f5874fa33a2"
+              },
+              "id": "u:b3c09a12a105"
+            },
+            {
+              "label": "编辑流程模型",
+              "type": "button",
+              "level": "link",
+              "id": "u:01d5614d6194",
+              "actionType": "",
+              "onEvent": {
+                "click": {
+                  "weight": 0,
+                  "actions": [
+                    {
+                      "args": {
+                        "params": [
+                        ],
+                        "url": "$proccessDesignerUrl/?id=${id}&&token=$token&&template=1"
+                      },
+                      "actionType": "url"
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "id": "u:3faed6044f7c",
+          "placeholder": "-",
+          "quickEdit": false
+        }
+      ],
+      "bulkActions": [
+      ],
+      "itemActions": [
+      ],
+      "features": [
+        "filter",
+        "create",
+        "delete",
+        "update"
+      ],
+      "filterColumnCount": 3,
+      "perPageAvailable": [
+        10,
+        20,
+        50
+      ],
+      "messages": {
+      },
+      "perPage": 10,
+      "keepItemSelectionOnPageChange": false,
+      "footerToolbar": [
+        {
+          "type": "statistics"
+        },
+        {
+          "type": "switch-per-page",
+          "tpl": "内容",
+          "id": "u:f00cdfc70c8b"
+        },
+        {
+          "type": "pagination"
+        }
+      ],
+      "headerToolbar": [
+        {
+          "label": "新增",
+          "type": "button",
+          "actionType": "dialog",
+          "level": "primary",
+          "dialog": {
+            "title": "新增",
+            "body": [
+              {
+                "type": "form",
+                "api": {
+                  "method": "post",
+                  "url": "/api/admin/processTemplate/save",
+                  "messages": {
+                  }
+                },
+                "body": [
+                  {
+                    "type": "input-text",
+                    "name": "name",
+                    "label": "名称",
+                    "id": "u:b3786bf4b08a"
+                  },
+                  {
+                    "type": "input-text",
+                    "name": "catalog",
+                    "label": "分类",
+                    "id": "u:5de0c78a64c6"
+                  }
+                ],
+                "id": "u:5b7179c4e7c6"
+              }
+            ],
+            "type": "dialog",
+            "id": "u:a72c18c9a4c9"
+          },
+          "id": "u:4c22f80c7f19"
+        },
+        "bulkActions"
+      ]
+    }
+  ],
+  "id": "u:3f9ab6253d4e",
+  "pullRefresh": {
+    "disabled": true
+  },
+  "regions": [
+    "body"
+  ]
+}

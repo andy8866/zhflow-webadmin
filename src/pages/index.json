@@ -24,6 +24,11 @@
           "schema": "$userList"
         },
         {
+          "label": "流程模板",
+          "url": "/processTemplate",
+          "schema": "$processTemplate"
+        },
+        {
           "label": "应用功能",
           "url": "/appMenu",
           "children": [
@@ -61,6 +66,11 @@
               "label": "执行任务",
               "url": "/appMenu/processTaskExecute",
               "schema": "$processTaskExecute"
+            },
+            {
+              "label": "已完成流程",
+              "url": "/appMenu/processComplete",
+              "schema": "$processComplete"
             }
           ]
         }
