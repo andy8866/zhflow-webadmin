@@ -8,9 +8,10 @@
       "syncLocation": false,
       "api": {
         "method": "get",
-        "url": "/api/admin/processTemplate/getList",
+        "url": "/api/admin/processModel/getList?isTemplate=1",
         "messages": {
-        }
+        },
+        "dataType": "json"
       },
       "columns": [
         {
@@ -52,7 +53,7 @@
               "confirmText": "确定要删除？",
               "api": {
                 "method": "get",
-                "url": "/api/admin/processTemplate/del?id=${id}"
+                "url": "/api/admin/processModel/del?id=${id}"
               },
               "id": "u:309f213d64a4",
               "onEvent": {
@@ -74,13 +75,21 @@
                 "body": [
                   {
                     "type": "form",
-                    "api": "post:/api/admin/processTemplate/save",
+                    "api": "post:/api/admin/processModel/save",
                     "body": [
                       {
                         "name": "id",
                         "label": "id",
                         "type": "input-text",
                         "id": "u:9e3ef8bb07b0",
+                        "hidden": true
+                      },
+                      {
+                        "name": "isTemplate",
+                        "label": "是否为模板",
+                        "type": "input-text",
+                        "id": "u:c1284f50645c",
+                        "value": "1",
                         "hidden": true
                       },
                       {
@@ -119,7 +128,7 @@
                       "args": {
                         "params": [
                         ],
-                        "url": "$proccessDesignerUrl/?id=${id}&&token=$token&&template=1"
+                        "url": "$proccessDesignerUrl/?id=${id}&&token=$token"
                       },
                       "actionType": "url"
                     }
@@ -173,22 +182,31 @@
           "actionType": "dialog",
           "level": "primary",
           "dialog": {
+            "type": "dialog",
             "title": "新增",
             "body": [
               {
                 "type": "form",
                 "api": {
                   "method": "post",
-                  "url": "/api/admin/processTemplate/save",
+                  "url": "/api/admin/processModel/save",
                   "messages": {
                   }
                 },
                 "body": [
                   {
                     "type": "input-text",
+                    "name": "isTemplate",
+                    "label": "是否为模板",
+                    "id": "u:b3786bf4b08a",
+                    "value": "1",
+                    "hidden": true
+                  },
+                  {
+                    "type": "input-text",
                     "name": "name",
                     "label": "名称",
-                    "id": "u:b3786bf4b08a"
+                    "id": "u:4ba0c75dbc8a"
                   },
                   {
                     "type": "input-text",
@@ -200,7 +218,6 @@
                 "id": "u:5b7179c4e7c6"
               }
             ],
-            "type": "dialog",
             "id": "u:a72c18c9a4c9"
           },
           "id": "u:4c22f80c7f19"

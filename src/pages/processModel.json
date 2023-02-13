@@ -1,6 +1,6 @@
 {
   "type": "page",
-  "title": "",
+  "title": "流程模型",
   "body": [
     {
       "type": "crud",
@@ -8,7 +8,7 @@
       "syncLocation": false,
       "api": {
         "method": "get",
-        "url": "/api/admin/processModel/getList",
+        "url": "/api/admin/processModel/getList?isTemplate=0",
         "messages": {
         }
       },
@@ -76,6 +76,14 @@
                         "type": "input-text",
                         "id": "u:9e3ef8bb07b0",
                         "hidden": true
+                      },
+                      {
+                        "name": "isTemplate",
+                        "label": "是否为模板",
+                        "type": "input-text",
+                        "id": "u:432f91c4cab7",
+                        "hidden": true,
+                        "value": "0"
                       },
                       {
                         "name": "name",
@@ -234,9 +242,17 @@
                 "body": [
                   {
                     "type": "input-text",
+                    "name": "isTemplate",
+                    "label": "是否为模板",
+                    "id": "u:78c0285962ab",
+                    "value": "0",
+                    "hidden": true
+                  },
+                  {
+                    "type": "input-text",
                     "name": "name",
                     "label": "名称",
-                    "id": "u:78c0285962ab"
+                    "id": "u:25f93c5edd7c"
                   }
                 ],
                 "id": "u:67a5b770e87b"
