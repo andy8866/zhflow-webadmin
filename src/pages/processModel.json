@@ -8,7 +8,7 @@
       "syncLocation": false,
       "api": {
         "method": "get",
-        "url": "/api/admin/processModel/getList?isTemplate=0",
+        "url": "/api/admin/processModel/getList?asTemplate=0",
         "messages": {
         }
       },
@@ -78,7 +78,7 @@
                         "hidden": true
                       },
                       {
-                        "name": "isTemplate",
+                        "name": "asTemplate",
                         "label": "是否为模板",
                         "type": "input-text",
                         "id": "u:432f91c4cab7",
@@ -242,7 +242,7 @@
                 "body": [
                   {
                     "type": "input-text",
-                    "name": "isTemplate",
+                    "name": "asTemplate",
                     "label": "是否为模板",
                     "id": "u:78c0285962ab",
                     "value": "0",
