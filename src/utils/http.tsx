@@ -39,5 +39,5 @@ export async function doHttp(url:string,method:string,params:any,headers:any){
 }
 
 function additionHeaders(headers:any){
-    headers['Authorization']='Bearer '+getToken()
+    headers['token']=getToken()
 }
