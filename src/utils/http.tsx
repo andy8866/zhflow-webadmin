@@ -2,7 +2,7 @@ import axios from "axios";
 import {getToken} from "./auth";
 import {toast} from 'amis-ui';
 
-export async function doHttp(url:string,method:string,params:any,headers:any){
+export async function doHttp(url:string,method:string,params:any,headers:any,check:any=false){
     if(headers==null) {
         headers={}
     }
@@ -26,7 +26,7 @@ export async function doHttp(url:string,method:string,params:any,headers:any){
         const response = await axios.get(url, config)
         console.log(response)
 
-        if(response.data.status!=0 && response.data.status!=2){
+        if(check && response.data.status!=0 && response.data.status!=2){
             toast.error(response.data.msg);
         }
 
@@ -39,5 +39,8 @@ export async function doHttp(url:string,method:string,params:any,headers:any){
 }
 
 function additionHeaders(headers:any){
-    headers['token']=getToken()
+    const token=getToken();
+    if(token) {
+        headers['token']=token;
+    }
 }
