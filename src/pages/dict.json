@@ -1,0 +1,136 @@
+{
+  "type": "page",
+  "title": "字典列表",
+  "body": [
+    {
+      "type": "grid",
+      "columns": [
+        {
+          "body": [
+            {
+              "type": "service",
+              "body": [
+                {
+                  "type": "button",
+                  "label": "新建",
+                  "onEvent": {
+                    "click": {
+                      "actions": [
+                        {
+                          "args": {
+                          },
+                          "dialog": {
+                            "type": "dialog",
+                            "title": "新建",
+                            "body": [
+                              {
+                                "type": "form",
+                                "title": "",
+                                "body": [
+                                  {
+                                    "label": "类型",
+                                    "type": "input-text",
+                                    "name": "type",
+                                    "id": "u:8552b0fe313e"
+                                  },
+                                  {
+                                    "label": "名称",
+                                    "type": "input-text",
+                                    "name": "name",
+                                    "id": "u:59879d08cfe7"
+                                  }
+                                ],
+                                "id": "u:c985327cb79c"
+                              }
+                            ],
+                            "showCloseButton": true,
+                            "showErrorMsg": true,
+                            "showLoading": true,
+                            "id": "u:faedc1660ee6"
+                          },
+                          "actionType": "dialog"
+                        }
+                      ]
+                    }
+                  },
+                  "id": "u:9e1973aafd2a",
+                  "level": "primary"
+                },
+                {
+                  "type": "list",
+                  "listItem": {
+                    "body": [
+                      {
+                        "type": "tpl",
+                        "tpl": "n:${name}",
+                        "id": "u:a4cb2a6a1eb7",
+                        "wrapperComponent": ""
+                      }
+                    ],
+                    "actions": [
+                      {
+                        "type": "dropdown-button",
+                        "label": "编辑",
+                        "buttons": [
+                          {
+                            "type": "button",
+                            "label": "编辑",
+                            "onEvent": {
+                              "click": {
+                                "actions": [
+                                ]
+                              }
+                            },
+                            "id": "u:48ef57de74b5"
+                          },
+                          {
+                            "type": "button",
+                            "label": "删除",
+                            "onEvent": {
+                              "click": {
+                                "actions": [
+                                ]
+                              }
+                            },
+                            "id": "u:c624d07bf3c3"
+                          }
+                        ],
+                        "id": "u:1c87f51a5a8d"
+                      }
+                    ],
+                    "id": "u:8b7d37ba6ea5"
+                  },
+                  "id": "u:e1a3c4310cd2",
+                  "title": "字典组"
+                }
+              ],
+              "id": "u:b40a8b7d71f3",
+              "messages": {
+              },
+              "api": {
+                "url": "/api/admin/dict/getGroupList",
+                "method": "get",
+                "messages": {
+                }
+              }
+            }
+          ],
+          "id": "u:7a727463053f"
+        },
+        {
+          "body": [
+          ],
+          "id": "u:f2b8bfe9fa1b"
+        }
+      ],
+      "id": "u:d09964fba331"
+    }
+  ],
+  "id": "u:0e2211e0cf12",
+  "pullRefresh": {
+    "disabled": true
+  },
+  "regions": [
+    "body"
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "type": "page",
-  "title": "",
+  "title": "用户列表",
   "body": [
     {
       "type": "crud",

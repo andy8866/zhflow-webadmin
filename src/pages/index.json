@@ -24,6 +24,11 @@
           "schema": "$userList"
         },
         {
+          "label": "字典列表",
+          "url": "/dictList",
+          "schema": "$dictList"
+        },
+        {
           "label": "流程模板",
           "url": "/processTemplate",
           "schema": "$processTemplate"

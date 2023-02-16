@@ -1,6 +1,6 @@
 {
   "type": "page",
-  "title": "",
+  "title": "应用管理",
   "body": [
     {
       "type": "crud",
