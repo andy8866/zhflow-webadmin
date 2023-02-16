@@ -1,6 +1,4 @@
 import {doHttp} from "./http";
-
-import loginJson from '../pages/login.json';
 import getIndexJson from "../pages";
 import {getUrl} from "./httpUtil";
 

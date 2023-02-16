@@ -11,6 +11,8 @@ export const amisEnv = {
         $url:import.meta.env.VITE_URL,
         // @ts-ignore
         $proccessDesignerUrl:import.meta.env.VITE_PROCESS_DESIGNER_URL,
+        // @ts-ignore
+        $editorUrl:import.meta.env.VITE_EDITOR_URL,
         $token:getToken()
     },
     replaceTextKeys: ['url'],
