@@ -1,7 +1,6 @@
 {
   "type": "app",
   "brandName": "中流",
-  "asideBefore": "$asideBefore",
   "pages": [
     {
       "label": "",
@@ -12,11 +11,6 @@
           "label": "客户意见",
           "url": "/suggest",
           "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=suggest"
-        },
-        {
-          "label": "应用管理",
-          "url": "/appManage",
-          "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=appManage"
         },
         {
           "label": "用户列表",
