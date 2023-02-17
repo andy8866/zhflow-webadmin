@@ -788,11 +788,6 @@
     "@webassemblyjs/ast" "1.11.1"
     "@xtuc/long" "4.2.2"
 
-"@webcomponents/webcomponentsjs@^2.6.0":
-  version "2.7.0"
-  resolved "https://registry.npmmirror.com/@webcomponents/webcomponentsjs/-/webcomponentsjs-2.7.0.tgz#8a87aeaaa0757c95eae0e07dd45f3050d1f8be01"
-  integrity sha512-j161Z9oiy8k74vchdrQGihfSp7QulrTclCUiPo0D7JF6/RjpXAmB0ThlTAFlSElkgqg0vdFgNAXaX9ZHZy25wQ==
-
 "@webpack-cli/configtest@^1.2.0":
   version "1.2.0"
   resolved "https://registry.npmmirror.com/@webpack-cli/configtest/-/configtest-1.2.0.tgz#7b20ce1c12533912c3b217ea68262365fa29a6f5"
@@ -899,34 +894,6 @@ amis-core@^2.6.0:
     tslib "^2.3.1"
     uncontrollable "7.2.1"
 
-amis-editor-core@*:
-  version "5.2.3"
-  resolved "https://registry.npmmirror.com/amis-editor-core/-/amis-editor-core-5.2.3.tgz#9dcc2135ffb4c2f3cf7de6a72d941d97a468c2d0"
-  integrity sha512-VoutEyLnJm2bhBo+GhEnJcAChGFnRleoa3YO77S5I4eqKJLUybB95flY8PM9ZNVa4unH0BnmgBC3wD79rKWlAQ==
-  dependencies:
-    axios "0.21.1"
-    deep-diff "1.0.2"
-    json-ast-comments "^1.1.0"
-    lodash "^4.17.15"
-    mobx "^4.5.0"
-    mobx-react "^6.3.1"
-    mobx-state-tree "^3.17.3"
-    react-json-view "^1.21.3"
-    sortablejs "^1.14.0"
-
-amis-editor@^5.2.3:
-  version "5.2.3"
-  resolved "https://registry.npmmirror.com/amis-editor/-/amis-editor-5.2.3.tgz#e26748d0b13ad69c4a58fa12c9c63d0992724478"
-  integrity sha512-Ff1DcDHF5R7Ep+lP1zH7aOco5eqaK6etvbQ/Hk/wW6iYKJP2WlMUhQe7oOPZMQZUFu85v/9/9AeoNt+Qf1FP7A==
-  dependencies:
-    "@webcomponents/webcomponentsjs" "^2.6.0"
-    amis-editor-core "*"
-    amis-postcss "1.0.0"
-    amis-theme-editor "*"
-    i18n-runtime "*"
-    lodash "^4.17.15"
-    mobx-state-tree "^3.17.3"
-
 amis-formula@^2.6.0:
   version "2.6.0"
   resolved "https://registry.npmmirror.com/amis-formula/-/amis-formula-2.6.0.tgz#126b7c1f6c17fa2e1076338f783482a762dea0ad"
@@ -936,24 +903,7 @@ amis-formula@^2.6.0:
     moment "^2.29.4"
     tslib "^2.3.1"
 
-amis-postcss@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmmirror.com/amis-postcss/-/amis-postcss-1.0.0.tgz#3bfbcbdf9ffe5d73a2b80b2a8012a6608936bb21"
-  integrity sha512-OeKbbTvsaIcOq2SZ1VV1GyshhF2fFbFXXc8IQ3ZTIu0uTtJBGFVYZ6sJ40nOznWeptEdfYpVdB/JEtBlXlSWag==
-
-amis-theme-editor-helper@*:
-  version "2.0.8"
-  resolved "https://registry.npmmirror.com/amis-theme-editor-helper/-/amis-theme-editor-helper-2.0.8.tgz#2ba45502b0b33ca699bdbea927965b7a11ab685f"
-  integrity sha512-q7QbQFfFFClrP4sWNJKhJOALjHwcqJViOodxL3d1CdALe/BLl2wym9Dpygfsm18aZicjLnEy27Y/Sw16EnT8tw==
-
-amis-theme-editor@*:
-  version "2.0.8"
-  resolved "https://registry.npmmirror.com/amis-theme-editor/-/amis-theme-editor-2.0.8.tgz#c597d1665478739748380120071877c61716413a"
-  integrity sha512-J7iv3i4ms0eTAm3TndFERYgWzmb9gzN7bkNyKY6rOp0IvRv/opUX1SJIVXbFk0m1DGUr/gBwC9IChPWs1q4JAQ==
-  dependencies:
-    amis-theme-editor-helper "*"
-
-amis-ui@^2.0.1, amis-ui@^2.6.0:
+amis-ui@2.6.0, amis-ui@^2.6.0:
   version "2.6.0"
   resolved "https://registry.npmmirror.com/amis-ui/-/amis-ui-2.6.0.tgz#a69f3d8f30839efe425ae64dcd3ce43834d2e4af"
   integrity sha512-r28KT3TSzpBr7v/WrWQKPf4KO2FUMIUnLM0+LmQuhStQs402sPfl682NFtTCQbrFQvJMpkaQCYMp6COseeqMIA==
@@ -993,7 +943,7 @@ amis-ui@^2.0.1, amis-ui@^2.6.0:
     tslib "^2.3.1"
     uncontrollable "7.2.1"
 
-amis@^2.0.1:
+amis@2.6.0:
   version "2.6.0"
   resolved "https://registry.npmmirror.com/amis/-/amis-2.6.0.tgz#eb0f45c0156b1f4c9f28fc9e2f6423d6fb92c310"
   integrity sha512-HgiDT3vt+NVBy50HDk5YNjKO/y2slWrNl+Wdo1ip5ExL7vMpXwkSp2XSF7YzdgeSIKUptgO+7NBRE1oKGAmtVw==
@@ -1139,13 +1089,6 @@ attr-accept@2.2.2, attr-accept@^2.2.2:
   version "2.2.2"
   resolved "https://registry.npmmirror.com/attr-accept/-/attr-accept-2.2.2.tgz#646613809660110749e92f2c10833b70968d929b"
   integrity sha512-7prDjvt9HmqiZ0cl5CRjtS84sEyhsHP2coDkaZKRKVfCDo9s7iw7ChVmar78Gu9pC4SoR/28wFu/G5JJhTnqEg==
-
-axios@0.21.1:
-  version "0.21.1"
-  resolved "https://registry.npmmirror.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
-  integrity sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
-  dependencies:
-    follow-redirects "^1.10.0"
 
 axios@^0.26.1:
   version "0.26.1"
@@ -1658,11 +1601,6 @@ debug@^4.1.0:
   integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
   dependencies:
     ms "2.1.2"
-
-deep-diff@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npmmirror.com/deep-diff/-/deep-diff-1.0.2.tgz#afd3d1f749115be965e89c63edc7abb1506b9c26"
-  integrity sha512-aWS3UIVH+NPGCD1kki+DCU9Dua032iSsO43LqQpcs4R3+dVv7tX0qBGjiVHJHjplsoUM2XRO/KB92glqc68awg==
 
 deepmerge@^4.2.2:
   version "4.2.2"
@@ -2252,7 +2190,7 @@ flux@^4.0.1:
     fbemitter "^3.0.0"
     fbjs "^3.0.1"
 
-follow-redirects@^1.0.0, follow-redirects@^1.10.0, follow-redirects@^1.14.8:
+follow-redirects@^1.0.0, follow-redirects@^1.14.8:
   version "1.15.2"
   resolved "https://registry.npmmirror.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
   integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
@@ -2552,11 +2490,6 @@ human-signals@^2.1.0:
   resolved "https://registry.npmmirror.com/human-signals/-/human-signals-2.1.0.tgz#dc91fcba42e4d06e4abaed33b3e7a3c02f514ea0"
   integrity sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==
 
-i18n-runtime@*:
-  version "0.0.22"
-  resolved "https://registry.npmmirror.com/i18n-runtime/-/i18n-runtime-0.0.22.tgz#d12eecdd775c4335e35bcbc430de88e58dc453b6"
-  integrity sha512-9mg/o+1/yXg/jdJypZW5TMNf/nnqGoz8Kwo1Ejl1tpUKmj+1rJv6DS/evdWV75BS7T2NFkCh/rk8AuRa5US+uQ==
-
 iconv-lite@0.4.24:
   version "0.4.24"
   resolved "https://registry.npmmirror.com/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
@@ -2787,11 +2720,6 @@ jsesc@^2.5.1:
   version "2.5.2"
   resolved "https://registry.npmmirror.com/jsesc/-/jsesc-2.5.2.tgz#80564d2e483dacf6e8ef209650a67df3f0c283a4"
   integrity sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==
-
-json-ast-comments@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmmirror.com/json-ast-comments/-/json-ast-comments-1.1.0.tgz#2e28c679b3f748b8484e91b6e379c72ccbfea6f6"
-  integrity sha512-Tl+jICf8fz7/ykCC80KhosTnTPbgZSaIwkVO4oJ2CoKol3uxo1tJ+b7+syN8kHo9vZspyLeS8Q4ZlGl9Rs9Elg==
 
 json-parse-even-better-errors@^2.3.0, json-parse-even-better-errors@^2.3.1:
   version "2.3.1"
@@ -3741,7 +3669,7 @@ react-is@^17.0.1, react-is@^17.0.2:
   resolved "https://registry.npmmirror.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
-react-json-view@1.21.3, react-json-view@^1.21.3:
+react-json-view@1.21.3:
   version "1.21.3"
   resolved "https://registry.npmmirror.com/react-json-view/-/react-json-view-1.21.3.tgz#f184209ee8f1bf374fb0c41b0813cff54549c475"
   integrity sha512-13p8IREj9/x/Ye4WI/JpjhoIwuzEgUAtgJZNBJckfzJt1qyh24BdTm6UQNGnyTq9dapQdrqvquZTo3dz1X6Cjw==
@@ -4147,7 +4075,7 @@ sockjs@^0.3.24:
     uuid "^8.3.2"
     websocket-driver "^0.7.4"
 
-sortablejs@1.15.0, sortablejs@^1.14.0:
+sortablejs@1.15.0:
   version "1.15.0"
   resolved "https://registry.npmmirror.com/sortablejs/-/sortablejs-1.15.0.tgz#53230b8aa3502bb77a29e2005808ffdb4a5f7e2a"
   integrity sha512-bv9qgVMjUMf89wAvM6AxVvS/4MX3sPeN0+agqShejLU5z5GX4C75ow1O2e5k4L6XItUyAK3gH6AxSbXrOM5e8w==

@@ -1,0 +1,23 @@
+{
+  "type": "page",
+  "id": "u:e212b6ebddd0",
+  "asideResizor": false,
+  "style": {
+    "boxShadow": " 0px 0px 0px 0px transparent"
+  },
+  "pullRefresh": {
+    "disabled": true
+  },
+  "regions": [
+    "body"
+  ],
+  "body": [
+    {
+      "type": "tpl",
+      "tpl": "请编辑内容",
+      "inline": true,
+      "wrapperComponent": "",
+      "id": "u:ac786625cfa7"
+    }
+  ]
+}

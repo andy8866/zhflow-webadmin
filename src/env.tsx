@@ -61,7 +61,8 @@ export const amisEnv = {
                 },2500)
             }
 
-            return responseObj
+            responseObj.style=null;
+            return responseObj;
         }];
 
         if (method !== 'post' && method !== 'put' && method !== 'patch') {

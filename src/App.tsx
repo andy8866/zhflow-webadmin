@@ -25,7 +25,7 @@ class AMISComponent extends React.Component<any, any> {
         const page=getPage();
         page.then((data)=>{
             this.setState({
-                page: data
+                page:data
             });
         })
     }

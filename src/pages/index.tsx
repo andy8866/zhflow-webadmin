@@ -1,5 +1,6 @@
 import index from "./index.json";
 import {getUrl} from "../utils/httpUtil";
+import {doHttp} from "../utils/http";
 
 export default async function getIndexJson() {
     // @ts-ignore
@@ -7,6 +8,5 @@ export default async function getIndexJson() {
 
     json = json.replace(/"\$url"/g, getUrl());
 
-    // console.log(json)
-    return JSON.parse(json);
+    return JSON.parse(json)
 }
