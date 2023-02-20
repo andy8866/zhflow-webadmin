@@ -28,52 +28,57 @@
           "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=dictList"
         },
         {
-          "label": "流程模板",
-          "url": "/processTemplate",
-          "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=processTemplate"
-        },
-        {
-          "label": "应用功能",
-          "url": "/appMenu",
+          "label": "流程",
+          "url": "/process",
           "children": [
             {
+              "label": "流程模板",
+              "url": "/process/template",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=processTemplate"
+            },
+            {
+              "label": "流程UI",
+              "url": "/process/ui",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=processUi"
+            },
+            {
               "label": "流程模型",
-              "url": "/appMenu/processModel",
+              "url": "/process/processModel",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=processModel"
             },
             {
               "label": "流程部署",
-              "url": "/appMenu/processDeployment",
+              "url": "/process/processDeployment",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=processDeployment"
             },
             {
               "label": "流程定义",
-              "url": "/appMenu/processDefinition",
+              "url": "/process/processDefinition",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=processDefinition"
             },
             {
               "label": "流程实例",
-              "url": "/appMenu/processInstance",
+              "url": "/process/processInstance",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=processInstance"
             },
             {
               "label": "待办任务",
-              "url": "/appMenu/processAgendaTask",
+              "url": "/process/processAgendaTask",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=processAgendaTask"
             },
             {
               "label": "待领任务",
-              "url": "/appMenu/processClaimTask",
+              "url": "/process/processClaimTask",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=processClaimTask"
             },
             {
               "label": "执行任务",
-              "url": "/appMenu/processTaskExecute",
+              "url": "/process/processTaskExecute",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=processTaskExecute"
             },
             {
               "label": "已完成流程",
-              "url": "/appMenu/processComplete",
+              "url": "/process/processComplete",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=processComplete"
             }
           ]
