@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {getToken} from "./auth";
 
 export function getUrl(){
   let url=window.location.origin
@@ -35,8 +36,14 @@ export function getUrlParam(paraName:any) {
 }
 
 export function doHttp(url:any,data:any,method:any,successCallBack:any,failCallBack:any){
+  let token=getUrlParam("token")
+  if(!token) {
+    // @ts-ignore
+    token=getToken()
+  }
+
   let headers={
-    "token": getUrlParam("token"),
+    "token": token,
     "content-type": "application/json"
   }
   axios({

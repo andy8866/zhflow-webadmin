@@ -85,5 +85,6 @@ export const amisEnv = {
         }
 
         return (axios as any)[method](url, data, config);
-    }
+    },
+    isCancel: (value: any) => (axios as any).isCancel(value),
 };
