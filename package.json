@@ -17,8 +17,7 @@
   },
   "scripts": {
     "vite": "vite",
-    "vite-build": "vite build",
-    "vite-build-dev": "vite build --mode dev"
+    "vite-build": "vite build"
   },
   "eslintConfig": {
     "extends": [
