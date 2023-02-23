@@ -9,5 +9,6 @@ export default defineConfig({
   },
   build:{
     assetsDir:"."
-  }
+  },
+  base: "/admin"
 });
