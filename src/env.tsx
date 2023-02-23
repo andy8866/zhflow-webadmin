@@ -11,7 +11,7 @@ export const amisEnv = {
         // @ts-ignore
         $url:getUrl(),
         // @ts-ignore
-        $proccessDesignerUrl:getUrl()+"/procDesigner",
+        $bpmnDesignerUrl:getUrl()+"/bpmnDesigner",
         // @ts-ignore
         $editorUrl:getUrl()+"/uiEditor",
         $token:getToken()
