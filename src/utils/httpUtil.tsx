@@ -1,10 +1,9 @@
 import axios from 'axios';
 import {getToken} from "./auth";
+import {toast} from "amis-ui";
 
 export function getUrl(){
   let url=window.location.origin
-  console.log(url);
-  console.log(window.location);
 
   if(url.indexOf("localhost")!=-1){
     return "http://localhost:8081";
@@ -35,17 +34,10 @@ export function getUrlParam(paraName:any) {
   }
 }
 
-export function doHttp(url:any,data:any,method:any,successCallBack:any,failCallBack:any){
-  let token=getUrlParam("token")
-  if(!token) {
-    // @ts-ignore
-    token=getToken()
-  }
+export function httpCallBack(url:any,data:any={},method:any="get",headers:any={},successCallBack:any,failCallBack:any=null){
 
-  let headers={
-    "token": token,
-    "content-type": "application/json"
-  }
+  headers=additionHeaders(headers);
+
   axios({
     url,
     method,
@@ -53,7 +45,7 @@ export function doHttp(url:any,data:any,method:any,successCallBack:any,failCallB
     data
   }).then(res=> {
     console.log(res);
-    var result=res.data
+    let result=res.data
     if(result.status!=0){
       alert(result.msg)
 
@@ -74,4 +66,52 @@ export function doHttp(url:any,data:any,method:any,successCallBack:any,failCallB
       failCallBack(err);
     }
   });
+}
+
+function additionHeaders(headers:any){
+  let token=getUrlParam("token")
+  if(!token) {
+    // @ts-ignore
+    token=getToken()
+  }
+
+  return {
+    ...headers,
+    "token": token,
+    "content-type": "application/json"
+  }
+}
+
+export async function httpAwait(url:string,method:string="get",params:any={},headers:any={},check:any=false){
+  if(headers==null) {
+    headers={}
+  }
+
+  headers=additionHeaders(headers)
+
+  const config:any={
+    headers
+  }
+
+  if(method=='GET'){
+    config['params']=params
+  }
+  if(method=='POST'){
+    config['data']=params
+  }
+
+  try{
+    const response = await axios.get(url, config)
+    console.log(response)
+
+    if(check && response.data.status!=0 && response.data.status!=2){
+      toast.error(response.data.msg);
+    }
+
+    return response.data
+  }catch (err){
+    console.log(err)
+    // @ts-ignore
+    toast.error(err)
+  }
 }

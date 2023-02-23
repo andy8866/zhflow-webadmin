@@ -1,6 +1,7 @@
 // amis 环境配置
 import axios from "axios";
 import {getToken} from "./utils/auth";
+import {getUrl} from "./utils/httpUtil";
 
 // @ts-ignore
 console.log(import.meta.env)
@@ -8,11 +9,11 @@ console.log(import.meta.env)
 export const amisEnv = {
     replaceText:{
         // @ts-ignore
-        $url:import.meta.env.VITE_URL,
+        $url:getUrl(),
         // @ts-ignore
-        $proccessDesignerUrl:import.meta.env.VITE_PROCESS_DESIGNER_URL,
+        $proccessDesignerUrl:getUrl()+"/procDesigner",
         // @ts-ignore
-        $editorUrl:import.meta.env.VITE_EDITOR_URL,
+        $editorUrl:getUrl()+"/uiEditor",
         $token:getToken()
     },
     replaceTextKeys: ['url'],
@@ -33,7 +34,7 @@ export const amisEnv = {
         console.log(config)
 
         // @ts-ignore
-        config.baseURL=import.meta.env.VITE_URL;
+        config.baseURL=getUrl()
 
         config.withCredentials = true;
         responseType && (config.responseType = responseType);

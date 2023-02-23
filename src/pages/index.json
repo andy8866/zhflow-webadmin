@@ -5,80 +5,80 @@
   "pages": [
     {
       "label": "",
-      "url": "/",
+      "url": "/admin",
       "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=welcome",
       "children": [
         {
           "label": "客户意见",
-          "url": "/suggest",
+          "url": "/admin/suggest",
           "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=suggest"
         },
         {
           "label": "用户列表",
-          "url": "/userList",
+          "url": "/admin/userList",
           "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=userList"
         },
         {
           "label": "页面管理",
-          "url": "/pageManage",
+          "url": "/admin/pageManage",
           "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=pageManage"
         },
         {
           "label": "字典列表",
-          "url": "/dictList",
+          "url": "/admin/dictList",
           "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=dictList"
         },
         {
           "label": "流程",
-          "url": "/process",
+          "url": "/admin/proc",
           "children": [
             {
               "label": "流程UI",
-              "url": "/process/ui",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=processUi"
+              "url": "/admin/proc/ui",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procUi"
             },
             {
               "label": "流程模型",
-              "url": "/process/processModel",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=processModel"
+              "url": "/admin/proc/model",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procModel"
             },
             {
               "label": "流程部署",
-              "url": "/process/processDeployment",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=processDeployment",
+              "url": "/admin/proc/deployment",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procDeployment",
               "visible": false
             },
             {
               "label": "流程发起",
-              "url": "/process/processDefinition",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=processDefinition"
+              "url": "/admin/proc/definition",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procDefinition"
             },
             {
               "label": "流程实例",
-              "url": "/process/processInstance",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=processInstance",
+              "url": "/admin/proc/instance",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procInstance",
               "visible": false
             },
             {
               "label": "待办任务",
-              "url": "/process/processAgendaTask",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=processAgendaTask"
+              "url": "/admin/proc/agendaTask",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procAgendaTask"
             },
             {
               "label": "待领任务",
-              "url": "/process/processClaimTask",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=processClaimTask"
+              "url": "/admin/proc/claimTask",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procClaimTask"
             },
             {
               "label": "处理任务",
-              "url": "/process/doTask",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=doTaskUI",
+              "url": "/admin/proc/doTask",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procDoTaskUi",
               "visible": false
             },
             {
               "label": "已完成流程",
-              "url": "/process/processComplete",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=processComplete"
+              "url": "/admin/proc/complete",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procComplete"
             }
           ]
         }

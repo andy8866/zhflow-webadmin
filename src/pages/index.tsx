@@ -1,12 +1,11 @@
 import index from "./index.json";
-import {getUrl} from "../utils/httpUtil";
-import {doHttp} from "../utils/http";
+import {getUrl, httpAwait} from "../utils/httpUtil";
 
 export default async function getIndexJson() {
     // @ts-ignore
     let json = JSON.stringify(index)
 
-    let ui=await doHttp(getUrl() + "/api/admin/uiPage/getUiByCode?code=header", "get", null, null)
+    let ui=await httpAwait(getUrl() + "/api/admin/uiPage/getUiByCode?code=header")
     json = json.replace(/"\$header"/g, JSON.stringify(ui));
 
     json = json.replace(/"\$url"/g, getUrl());

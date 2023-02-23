@@ -1,6 +1,6 @@
 import {ListenerAction, ListenerContext, RendererAction, RendererEvent} from 'amis-core';
 import {saveToken} from "../utils/auth";
-import {doHttp, getUrl} from "../utils/httpUtil";
+import {getUrl, httpCallBack} from "../utils/httpUtil";
 
 // 动作定义
 interface ISwitchUserAction extends ListenerAction {
@@ -23,11 +23,12 @@ export class SwitchUserAction implements RendererAction {
         console.log(data)
 
         // @ts-ignore
-        doHttp(getUrl() + "/api/admin/user/switchCurrentUser?id="+data.id, {},"get",(v:any)=>{
-            console.log(data)
+        const id=data.id;
+
+        httpCallBack(getUrl() + "/api/user/switchCurrentUser?id="+id, {},"get",{},(v:any)=>{
             const token=v.data
             saveToken(token)
             window.location.reload();
-        },null);
+        });
     }
 }
