@@ -15,7 +15,7 @@ async function validateToken(){
     }
 
     // @ts-ignore
-    let response = await httpAwait(getUrl()+'/api/security/validateToken','GET',null,null,true);
+    let response = await httpAwait(getUrl()+'/api/security/validateToken','get',null,null,true);
     if(response.status!=0){
         localStorage.removeItem("token");
         return false;
@@ -28,7 +28,7 @@ export async function getPage(){
     if(validateTokenR){
         return getIndexJson()
     }else{
-        const loingPage=await httpAwait(getUrl()+'/api/admin/uiPage/getUiByCode?code=login','GET',null,null);
+        const loingPage=await httpAwait(getUrl()+'/api/admin/uiPage/getUiByCode?code=login');
         return loingPage
     }
 }

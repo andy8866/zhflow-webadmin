@@ -72,31 +72,31 @@ function additionHeaders(headers:any){
   let token=getUrlParam("token")
   if(!token) {
     // @ts-ignore
-    token=getToken()
+    token=getToken();
   }
 
-  return {
-    ...headers,
-    "token": token,
-    "content-type": "application/json"
-  }
+  if(token) headers['token']= token;
+
+  headers['content-type']= "application/json";
 }
 
 export async function httpAwait(url:string,method:string="get",params:any={},headers:any={},check:any=false){
+  method=method.toLowerCase();
+
   if(headers==null) {
     headers={}
   }
 
-  headers=additionHeaders(headers)
+  additionHeaders(headers)
 
   const config:any={
     headers
   }
 
-  if(method=='GET'){
+  if(method=='get'){
     config['params']=params
   }
-  if(method=='POST'){
+  if(method=='post'){
     config['data']=params
   }
 
