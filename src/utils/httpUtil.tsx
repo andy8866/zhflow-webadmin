@@ -11,6 +11,24 @@ export function getUrl(){
 
   return url;
 }
+export function getBpmnDesignerUrl(){
+  let url=window.location.origin
+
+  if(url.indexOf("localhost")!=-1){
+    return "http://zhflow-dev.scyingneng.com/bpmnDesigner";
+  }
+
+  return url;
+}
+export function getUiEditorUrl(){
+  let url=window.location.origin
+
+  if(url.indexOf("localhost")!=-1){
+    return "http://zhflow-dev.scyingneng.com/uiEditor";
+  }
+
+  return url;
+}
 
 export function getUrlParam(paraName:any) {
   let url = window.location.toString();
