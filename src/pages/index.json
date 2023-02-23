@@ -6,6 +6,7 @@
     {
       "label": "",
       "url": "/admin",
+      "isDefaultPage": true,
       "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=welcome",
       "children": [
         {
