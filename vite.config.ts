@@ -8,6 +8,6 @@ export default defineConfig({
     port:3000
   },
   build:{
-    assetsDir:"admin"
+    assetsDir:"."
   }
 });
