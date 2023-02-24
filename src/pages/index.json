@@ -76,6 +76,11 @@
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procCompleteTask"
             },
             {
+              "label": "我发起的流程",
+              "url": "/admin/proc/myStartProc",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=myStartProc"
+            },
+            {
               "label": "已完成流程",
               "url": "/admin/proc/complete",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procComplete"
