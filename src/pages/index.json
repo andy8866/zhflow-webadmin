@@ -34,9 +34,9 @@
           "url": "/admin/proc",
           "children": [
             {
-              "label": "流程UI",
-              "url": "/admin/proc/ui",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procUi"
+              "label": "流程UI设计",
+              "url": "/admin/proc/uiDesign",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procUiDesign"
             },
             {
               "label": "流程模型",
@@ -76,15 +76,9 @@
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procComplete"
             },
             {
-              "label": "处理任务",
-              "url": "/admin/proc/doTask",
+              "label": "执行任务Ui",
+              "url": "/admin/proc/doTaskUi",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procDoTaskUi",
-              "visible": false
-            },
-            {
-              "label": "启动流程UI",
-              "url": "/admin/proc/startUi",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procStartUi",
               "visible": false
             }
           ]

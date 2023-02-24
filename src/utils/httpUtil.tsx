@@ -54,7 +54,7 @@ export function getUrlParam(paraName:any) {
 
 export function httpCallBack(url:any,data:any={},method:any="get",headers:any={},successCallBack:any,failCallBack:any=null){
 
-  headers=additionHeaders(headers);
+  additionHeaders(headers);
 
   axios({
     url,
