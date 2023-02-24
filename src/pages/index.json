@@ -71,6 +71,11 @@
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procClaimTask"
             },
             {
+              "label": "已完成任务",
+              "url": "/admin/proc/completeTask",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procCompleteTask"
+            },
+            {
               "label": "已完成流程",
               "url": "/admin/proc/complete",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procComplete"
@@ -79,6 +84,12 @@
               "label": "执行任务Ui",
               "url": "/admin/proc/doTaskUi",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procDoTaskUi",
+              "visible": false
+            },
+            {
+              "label": "浏览任务Ui",
+              "url": "/admin/proc/viewTaskUi",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procViewTaskUi",
               "visible": false
             }
           ]
