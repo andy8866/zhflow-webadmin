@@ -71,19 +71,20 @@
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procClaimTask"
             },
             {
-              "label": "已完成任务",
-              "url": "/admin/proc/completeTask",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procCompleteTask"
-            },
-            {
               "label": "我的流程",
               "url": "/admin/proc/myStartProc",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=myStartProc"
             },
             {
+              "label": "已完成任务",
+              "url": "/admin/proc/completeTask",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procCompleteTask"
+            },
+            {
               "label": "已完成流程",
               "url": "/admin/proc/complete",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procComplete"
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procComplete",
+              "visible": false
             },
             {
               "label": "执行任务Ui",
@@ -95,6 +96,12 @@
               "label": "浏览任务Ui",
               "url": "/admin/proc/viewTaskUi",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procViewTaskUi",
+              "visible": false
+            },
+            {
+              "label": "流程流转记录",
+              "url": "/admin/proc/flowRecord",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procFlowRecord",
               "visible": false
             }
           ]

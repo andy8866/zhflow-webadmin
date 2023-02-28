@@ -7,6 +7,8 @@ import 'amis/lib/themes/cxd.css';
 import 'amis/lib/helper.css';
 import 'amis/sdk/iconfont.css';
 
+import "./app.css";
+
 import {AlertComponent, render as renderAmis, ToastComponent} from 'amis';
 import {amisEnv} from "./env";
 import {getPage} from "./utils/auth";

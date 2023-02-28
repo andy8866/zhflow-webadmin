@@ -1,7 +1,7 @@
 // amis 环境配置
 import axios from "axios";
 import {getToken} from "./utils/auth";
-import { getBpmnDesignerUrl, getUiEditorUrl, getUrl} from "./utils/httpUtil";
+import {getBpmnDesignerUrl, getBpmnViewerUrl, getUiEditorUrl, getUrl} from "./utils/httpUtil";
 
 // @ts-ignore
 console.log(import.meta.env)
@@ -12,6 +12,8 @@ export const amisEnv = {
         $url:getUrl(),
         // @ts-ignore
         $bpmnDesignerUrl:getBpmnDesignerUrl(),
+        // @ts-ignore
+        $bpmnViewerUrl:getBpmnViewerUrl(),
         // @ts-ignore
         $editorUrl:getUiEditorUrl(),
         $token:getToken()

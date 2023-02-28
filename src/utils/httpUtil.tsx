@@ -20,6 +20,11 @@ export function getBpmnDesignerUrl(){
 
   return url;
 }
+
+export function getBpmnViewerUrl(){
+  return getBpmnDesignerUrl()+"/viewer";
+}
+
 export function getUiEditorUrl(){
   let url=window.location.origin
 
@@ -29,6 +34,7 @@ export function getUiEditorUrl(){
 
   return url;
 }
+
 
 export function getUrlParam(paraName:any) {
   let url = window.location.toString();

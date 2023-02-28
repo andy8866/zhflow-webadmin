@@ -28,7 +28,7 @@ export class SwitchUserAction implements RendererAction {
         httpCallBack(getUrl() + "/api/user/switchCurrentUser?id="+id, {},"get",{},(v:any)=>{
             const token=v.data
             saveToken(token)
-            window.location.href="/admin"
+            window.location.href="/admin/proc"
         });
     }
 }
