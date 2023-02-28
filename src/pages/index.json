@@ -99,9 +99,9 @@
               "visible": false
             },
             {
-              "label": "流程流转记录",
-              "url": "/admin/proc/flowRecord",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procFlowRecord",
+              "label": "流程详情",
+              "url": "/admin/proc/detail",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procDetail",
               "visible": false
             }
           ]
