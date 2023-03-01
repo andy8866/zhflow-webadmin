@@ -22,6 +22,7 @@ export function getBpmnDesignerUrl(){
 }
 
 export function getBpmnViewerUrl(){
+  // return "http://localhost:8100/viewer"
   return getBpmnDesignerUrl()+"/viewer";
 }
 
