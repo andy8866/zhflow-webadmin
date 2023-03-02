@@ -81,7 +81,7 @@
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procCompleteTask"
             },
             {
-              "label": "抄送",
+              "label": "抄送我的",
               "url": "/admin/proc/copyList",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=copyList"
             },
