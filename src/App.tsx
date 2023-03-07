@@ -32,13 +32,8 @@ class AMISComponent extends React.Component<any, any> {
                 page:data
             });
         })
-
-        window.addEventListener("resize", this.resize); //增加
     }
 
-    componentWillUnmount() {
-        window.removeEventListener("resize", this.resize); //取消
-    }
     componentDidUpdate() {
         if(getUrlParam("isDialog")){
             // @ts-ignore
