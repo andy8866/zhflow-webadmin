@@ -1,15 +1,32 @@
 import getIndexJson from "../pages";
-import {getUrl, httpAwait} from "./httpUtil";
+import {getUrl, getUrlParam, httpAwait, isFrame, isProcFrame} from "./httpUtil";
+
 
 export function getToken(){
-    return localStorage.getItem("token");
-}
-export function saveToken(token:string){
-    return localStorage.setItem("token",token);
+    if(isFrame() || isProcFrame()){
+        return getAppToken();
+    }
+
+    return getUserToken();
 }
 
+export function getUserToken(){
+    return localStorage.getItem("userToken");
+}
+export function saveUserToken(token:string){
+    return localStorage.setItem("userToken",token);
+}
+
+export function getAppToken(){
+    return localStorage.getItem("appToken");
+}
+export function saveAppToken(appToken:string){
+    return localStorage.setItem("appToken",appToken);
+}
+
+
 async function validateToken(){
-    const token=getToken();
+    const token=getUserToken();
     if(!token){
         return false;
     }
@@ -17,18 +34,28 @@ async function validateToken(){
     // @ts-ignore
     let response = await httpAwait(getUrl()+'/api/security/validateToken','get',null,null,true);
     if(response.status!=0){
-        localStorage.removeItem("token");
+        localStorage.removeItem("userToken");
+        localStorage.removeItem("appToken");
         return false;
     }
     return true;
 }
 
+
 export async function getPage(){
-    const validateTokenR=await validateToken()
-    if(validateTokenR){
-        return getIndexJson()
-    }else{
-        const loingPage=await httpAwait(getUrl()+'/api/admin/uiPage/getUiByCode?code=login');
-        return loingPage
+    if(isFrame()) {
+        return await httpAwait(getUrl()+'/api/admin/uiPage/getUiByCode?code='+getUrlParam("code"));
+    }else if(isProcFrame()){
+        return await httpAwait(getUrl()+'/api/proc/ui/getContent?id='+getUrlParam("id")+'&taskId='+getUrlParam("taskId"));
+    }
+    else{
+        const validateTokenR=await validateToken()
+        if(validateTokenR){
+            return getIndexJson()
+        }else if (window.location.pathname=='/login'){
+            return await httpAwait(getUrl()+'/api/admin/uiPage/getUiByCode?code=login');
+        }else{
+            window.location.href="/login";
+        }
     }
 }

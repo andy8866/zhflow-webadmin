@@ -1,6 +1,12 @@
 import axios from 'axios';
 import {getToken} from "./auth";
 import {toast} from "amis-ui";
+import {basePath} from "../../vite.config";
+
+export function getClientUrl(){
+  console.log("origin:"+window.location.origin)
+  return window.location.origin;
+}
 
 export function getUrl(){
   let url=window.location.origin
@@ -11,6 +17,8 @@ export function getUrl(){
 
   return url;
 }
+
+
 export function getBpmnDesignerUrl(){
   let url=window.location.origin
 
@@ -57,6 +65,14 @@ export function getUrlParam(paraName:any) {
   else {
     return "";
   }
+}
+
+export function isFrame(){
+  return window.location.pathname=='/frame';
+}
+
+export function isProcFrame(){
+  return window.location.pathname=='/procFrame';
 }
 
 export function httpCallBack(url:any,data:any={},method:any="get",headers:any={},successCallBack:any,failCallBack:any=null){

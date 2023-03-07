@@ -1,6 +1,8 @@
 import {defineConfig} from 'vite';
 import react from '@vitejs/plugin-react';
 
+export let basePath="/";
+
 // @ts-ignore
 export default defineConfig(({ command, mode, ssrBuild }) => {
   let config={
