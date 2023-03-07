@@ -43,6 +43,7 @@ async function validateToken(){
 
 
 export async function getPage(){
+    console.log("origin:"+window.location.origin)
     if(isFrame()) {
         return await httpAwait(getUrl()+'/api/admin/uiPage/getUiByCode?code='+getUrlParam("code"));
     }else if(isProcFrame()){
@@ -55,7 +56,7 @@ export async function getPage(){
         }else if (window.location.pathname=='/login'){
             return await httpAwait(getUrl()+'/api/admin/uiPage/getUiByCode?code=login');
         }else{
-            window.location.href="/login";
+            window.location.href="/admin/login";
         }
     }
 }

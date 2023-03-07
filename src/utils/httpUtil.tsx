@@ -4,7 +4,6 @@ import {toast} from "amis-ui";
 import {basePath} from "../../vite.config";
 
 export function getClientUrl(){
-  console.log("origin:"+window.location.origin)
   return window.location.origin;
 }
 
