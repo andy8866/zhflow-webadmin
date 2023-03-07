@@ -5,103 +5,85 @@
   "pages": [
     {
       "label": "",
-      "url": "/admin",
+      "url": "$baseUrl/",
       "isDefaultPage": true,
       "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=welcome",
       "children": [
         {
           "label": "客户意见",
-          "url": "/admin/suggest",
+          "url": "$baseUrl/suggest",
           "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=suggest"
         },
         {
           "label": "用户列表",
-          "url": "/admin/userList",
+          "url": "$baseUrl/userList",
           "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=userList"
         },
         {
           "label": "页面管理",
-          "url": "/admin/pageManage",
+          "url": "$baseUrl/pageManage",
           "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=pageManage"
         },
         {
           "label": "字典列表",
-          "url": "/admin/dictList",
+          "url": "$baseUrl/dictList",
           "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=dictList"
         },
         {
           "label": "流程",
-          "url": "/admin/proc",
+          "url": "$baseUrl/proc",
           "children": [
             {
               "label": "流程UI设计",
-              "url": "/admin/proc/uiDesign?code=frameProcUiDesign",
+              "url": "$baseUrl/proc/uiDesign?code=frameProcUiDesign",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=appFrame"
             },
             {
               "label": "流程模型",
-              "url": "/admin/proc/model?code=frameProcModel",
+              "url": "$baseUrl/proc/model?code=frameProcModel",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=appFrame"
             },
             {
               "label": "流程部署",
-              "url": "/admin/proc/deployment?code=frameProcDeployment",
+              "url": "$baseUrl/proc/deployment?code=frameProcDeployment",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=appFrame",
               "visible": false
             },
             {
               "label": "流程发起",
-              "url": "/admin/proc/definition?code=frameProcDefinition",
+              "url": "$baseUrl/proc/definition?code=frameProcDefinition",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=appFrame"
             },
             {
               "label": "流程实例",
-              "url": "/admin/proc/instance?code=frameProcInstance",
+              "url": "$baseUrl/proc/instance?code=frameProcInstance",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=appFrame",
               "visible": false
             },
             {
               "label": "待办任务",
-              "url": "/admin/proc/agendaTask?code=frameProcAgendaTask",
+              "url": "$baseUrl/proc/agendaTask?code=frameProcAgendaTask",
               "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=appFrame"
             },
             {
               "label": "待领任务",
-              "url": "/admin/proc/claimTask",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procClaimTask"
+              "url": "$baseUrl/proc/claimTask?code=frameProcClaimTask",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=appFrame"
             },
             {
               "label": "我的流程",
-              "url": "/admin/proc/myStartProc",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=myStartProc"
+              "url": "$baseUrl/proc/myStartProc?code=frameMyStartProc",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=appFrame"
             },
             {
               "label": "已完成任务",
-              "url": "/admin/proc/completeTask",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procCompleteTask"
+              "url": "$baseUrl/proc/completeTask?code=frameProcCompleteTask",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=appFrame"
             },
             {
               "label": "抄送我的",
-              "url": "/admin/proc/copyList",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=copyList"
-            },
-            {
-              "label": "已完成流程",
-              "url": "/admin/proc/complete",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procComplete",
-              "visible": false
-            },
-            {
-              "label": "浏览任务Ui",
-              "url": "/admin/proc/viewTaskUi",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procViewTaskUi",
-              "visible": false
-            },
-            {
-              "label": "流程详情",
-              "url": "/admin/proc/detail",
-              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=procDetail",
-              "visible": false
+              "url": "$baseUrl/proc/copyList?code=frameCopyList",
+              "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=appFrame"
             }
           ]
         }

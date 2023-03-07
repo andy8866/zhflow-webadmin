@@ -1,10 +1,17 @@
 import axios from 'axios';
 import {getToken} from "./auth";
 import {toast} from "amis-ui";
-import {basePath} from "../../vite.config";
+
+export function getBaseUrl(){
+  // @ts-ignore
+  let baseUrl= import.meta.env.BASE_URL;
+
+  if(baseUrl=="/") return "";
+  return baseUrl;
+}
 
 export function getClientUrl(){
-  return window.location.origin+basePath;
+  return window.location.origin+getBaseUrl();
 }
 
 export function getUrl(){
@@ -67,11 +74,11 @@ export function getUrlParam(paraName:any) {
 }
 
 export function isFrame(){
-  return window.location.pathname==(basePath+'/frame');
+  return window.location.pathname==getBaseUrl()+'/frame';
 }
 
 export function isProcFrame(){
-  return window.location.pathname==(basePath+'/procFrame');
+  return window.location.pathname==getBaseUrl()+'/procFrame';
 }
 
 export function httpCallBack(url:any,data:any={},method:any="get",headers:any={},successCallBack:any,failCallBack:any=null){

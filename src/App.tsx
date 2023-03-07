@@ -13,6 +13,7 @@ import {AlertComponent, render as renderAmis, ToastComponent} from 'amis';
 import {amisEnv} from "./env";
 import {getPage} from "./utils/auth";
 import {loadAction} from "./actions/RootAction";
+import {getUrlParam} from "./utils/httpUtil";
 
 loadAction();
 
@@ -23,6 +24,7 @@ class AMISComponent extends React.Component<any, any> {
         this.state = {page: ''};
     }
 
+
     componentDidMount() {
         const page=getPage();
         page.then((data)=>{
@@ -30,6 +32,28 @@ class AMISComponent extends React.Component<any, any> {
                 page:data
             });
         })
+
+        window.addEventListener("resize", this.resize); //增加
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.resize); //取消
+    }
+    componentDidUpdate() {
+        if(getUrlParam("isDialog")){
+            // @ts-ignore
+            const height=document.getElementById('root').clientHeight;
+            console.log("clientHeight:"+height)
+            window.parent.postMessage(
+                {
+                    type: 'amis:resize',
+                    data: {
+                        height: height
+                    }
+                },
+                '*'
+            );
+        }
     }
 
     render() {
