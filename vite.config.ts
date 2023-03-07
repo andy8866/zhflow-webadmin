@@ -5,6 +5,13 @@ export let basePath="/";
 
 // @ts-ignore
 export default defineConfig(({ command, mode, ssrBuild }) => {
+
+    if (command === 'serve') {
+        basePath="/";
+    } else {
+        basePath="/admin";
+    }
+
   let config={
             plugins: [react()],
             server:{
@@ -13,14 +20,7 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
             build:{
               assetsDir:"."
             },
-            base: "/"
+            base: basePath
           };
-
-  if (command === 'serve') {
-      config.base="/";
     return config
-  } else {
-      config.base="/admin";
-      return config
-  }
 })

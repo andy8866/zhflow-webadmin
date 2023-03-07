@@ -4,7 +4,7 @@ import {toast} from "amis-ui";
 import {basePath} from "../../vite.config";
 
 export function getClientUrl(){
-  return window.location.origin;
+  return window.location.origin+basePath;
 }
 
 export function getUrl(){
@@ -19,7 +19,7 @@ export function getUrl(){
 
 
 export function getBpmnDesignerUrl(){
-  let url=window.location.origin
+  let url=window.location.origin+"/bpmnDesigner"
 
   if(url.indexOf("localhost")!=-1){
     return "http://zhflow-dev.scyingneng.com/bpmnDesigner";
@@ -34,7 +34,7 @@ export function getBpmnViewerUrl(){
 }
 
 export function getUiEditorUrl(){
-  let url=window.location.origin
+  let url=window.location.origin+"/uiEditor"
 
   if(url.indexOf("localhost")!=-1){
     return "http://zhflow-dev.scyingneng.com/uiEditor";
@@ -67,11 +67,11 @@ export function getUrlParam(paraName:any) {
 }
 
 export function isFrame(){
-  return window.location.pathname=='/frame';
+  return window.location.pathname==(basePath+'/frame');
 }
 
 export function isProcFrame(){
-  return window.location.pathname=='/procFrame';
+  return window.location.pathname==(basePath+'/procFrame');
 }
 
 export function httpCallBack(url:any,data:any={},method:any="get",headers:any={},successCallBack:any,failCallBack:any=null){

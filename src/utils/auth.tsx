@@ -1,5 +1,6 @@
 import getIndexJson from "../pages";
 import {getUrl, getUrlParam, httpAwait, isFrame, isProcFrame} from "./httpUtil";
+import {basePath} from "../../vite.config";
 
 
 export function getToken(){
@@ -53,10 +54,10 @@ export async function getPage(){
         const validateTokenR=await validateToken()
         if(validateTokenR){
             return getIndexJson()
-        }else if (window.location.pathname=='/login'){
+        }else if (window.location.pathname==(basePath+'/login')){
             return await httpAwait(getUrl()+'/api/admin/uiPage/getUiByCode?code=login');
         }else{
-            window.location.href="/admin/login";
+            window.location.href=basePath+"/login";
         }
     }
 }
