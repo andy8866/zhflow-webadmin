@@ -24,6 +24,10 @@ export function saveAppToken(appToken:string){
     return localStorage.setItem("appToken",appToken);
 }
 
+export function removeToken(){
+    localStorage.removeItem("userToken");
+    localStorage.removeItem("appToken");
+}
 
 async function validateToken(){
     const token=getUserToken();
@@ -34,8 +38,7 @@ async function validateToken(){
     // @ts-ignore
     let response = await httpAwait(getUrl()+'/api/security/validateToken','get',null,null,true);
     if(response.status!=0){
-        localStorage.removeItem("userToken");
-        localStorage.removeItem("appToken");
+        removeToken();
         return false;
     }
     return true;

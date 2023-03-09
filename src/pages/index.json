@@ -30,6 +30,11 @@
           "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=dictList"
         },
         {
+          "label": "应用列表",
+          "url": "$baseUrl/appList",
+          "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=appList"
+        },
+        {
           "label": "流程",
           "url": "$baseUrl/proc",
           "children": [

@@ -152,7 +152,7 @@ export async function httpAwait(url:string,method:string="get",params:any={},hea
     console.log(response)
 
     if(check && response.data.status!=0 && response.data.status!=2){
-      toast.error(response.data.msg);
+      throw new Error(response.data.msg)
     }
 
     return response.data
