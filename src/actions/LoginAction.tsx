@@ -26,7 +26,7 @@ export class LoginAction implements RendererAction {
         const token = data
         saveUserToken(token)
 
-        const responseData = await httpAwait(getUrl() + "/api/admin/third/getAppToken");
+        const responseData = await httpAwait(getUrl() + "/api/security/token/getAppToken");
         if(responseData.status!=0 && responseData.status!=2){
             removeToken();
             toast.error(responseData.msg)
@@ -35,6 +35,6 @@ export class LoginAction implements RendererAction {
         saveAppToken(responseData.data);
 
 
-        window.location.href = getBaseUrl()+"/proc/agendaTask";
+        window.location.href = getBaseUrl()+"/proc/agendaTask?code=frameProcAgendaTask";
     }
 }

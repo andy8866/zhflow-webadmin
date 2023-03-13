@@ -36,7 +36,7 @@ async function validateToken(){
     }
 
     // @ts-ignore
-    let response = await httpAwait(getUrl()+'/api/security/validateToken','get',null,null,true);
+    let response = await httpAwait(getUrl()+'/api/security/token/validateToken','get',null,null,true);
     if(response.status!=0){
         removeToken();
         return false;
