@@ -1,7 +1,7 @@
 import {ListenerAction, ListenerContext, RendererAction, RendererEvent} from 'amis-core';
-import {removeToken, saveAppToken, saveUserToken} from "../utils/auth";
-import {getBaseUrl, getUrl, httpAwait} from "../utils/httpUtil";
-import {toast} from "amis-ui";
+import {saveToken} from "../utils/auth";
+import {getBaseUrl} from "../utils/httpUtil";
+import {switchAppToken} from "../utils/appUtil";
 
 // 动作定义
 interface ILoginAction extends ListenerAction {
@@ -24,16 +24,9 @@ export class LoginAction implements RendererAction {
         console.log(data)
 
         const token = data
-        saveUserToken(token)
+        saveToken(token)
 
-        const responseData = await httpAwait(getUrl() + "/api/security/token/getAppToken");
-        if(responseData.status!=0 && responseData.status!=2){
-            removeToken();
-            toast.error(responseData.msg)
-            return ;
-        }
-        saveAppToken(responseData.data);
-
+        await switchAppToken("");
 
         window.location.href = getBaseUrl()+"/proc/agendaTask?code=frameProcAgendaTask";
     }

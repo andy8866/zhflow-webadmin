@@ -17,7 +17,8 @@
         {
           "label": "用户列表",
           "url": "$baseUrl/userList",
-          "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=userList"
+          "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=userList",
+          "visible": false
         },
         {
           "label": "页面管理",
@@ -27,7 +28,8 @@
         {
           "label": "字典列表",
           "url": "$baseUrl/dictList",
-          "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=dictList"
+          "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=dictList",
+          "visible": false
         },
         {
           "label": "应用列表",

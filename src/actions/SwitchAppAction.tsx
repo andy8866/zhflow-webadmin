@@ -3,8 +3,8 @@ import {saveToken} from "../utils/auth";
 import {getBaseUrl, getUrl, httpCallBack} from "../utils/httpUtil";
 
 // 动作定义
-interface ISwitchUserAction extends ListenerAction {
-    actionType: 'switchUserAction';
+interface ISwitchAppAction extends ListenerAction {
+    actionType: 'switchAppAction';
     args: {
         data: string
     };
@@ -13,19 +13,19 @@ interface ISwitchUserAction extends ListenerAction {
 /**
  * 我的动作实现
  */
-export class SwitchUserAction implements RendererAction {
+export class SwitchAppAction implements RendererAction {
     // @ts-ignore
-    run(action: ISwitchUserAction, renderer: ListenerContext, event: RendererEvent<any>) {
+    run(action: ISwitchAppAction, renderer: ListenerContext, event: RendererEvent<any>) {
         const props = renderer.props;
         const {data} = action.args;
 
-        console.log('switchUserAction')
+        console.log('SwitchAppAction')
         console.log(data)
 
         // @ts-ignore
-        const id=data.value;
+        const id=data.id;
 
-        httpCallBack(getUrl() + "/api/user/switchUser?id="+id, {},"get",{},(v:any)=>{
+        httpCallBack(getUrl() + "/api/app/switchApp?id="+id, {},"get",{},(v:any)=>{
             const token=v.data
             saveToken(token)
 

@@ -2,40 +2,23 @@ import getIndexJson from "../pages";
 import {getBaseUrl, getUrl, getUrlParam, httpAwait, isFrame, isProcFrame} from "./httpUtil";
 import app from "../App";
 
-
 export function getToken(){
-    if(isFrame() || isProcFrame()){
-        return getAppToken();
-    }
+    const token=getUrlParam("token")
 
-    return getUserToken();
-}
+    if(token) return token;
 
-export function getUserToken(){
-    return localStorage.getItem("userToken");
+    return localStorage.getItem("token");
 }
-export function saveUserToken(token:string){
-    return localStorage.setItem("userToken",token);
-}
-
-export function getAppToken(){
-    const appToken=getUrlParam("token")
-    console.log("appToken"+appToken)
-    if(appToken) return appToken;
-
-    return localStorage.getItem("appToken");
-}
-export function saveAppToken(appToken:string){
-    return localStorage.setItem("appToken",appToken);
+export function saveToken(token:string){
+    return localStorage.setItem("token",token);
 }
 
 export function removeToken(){
-    localStorage.removeItem("userToken");
-    localStorage.removeItem("appToken");
+    localStorage.removeItem("token");
 }
 
 async function validateToken(){
-    const token=getUserToken();
+    const token=getToken();
     if(!token){
         return false;
     }
