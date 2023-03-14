@@ -27,6 +27,6 @@ export class LoginAction implements RendererAction {
 
         await switchAppToken("");
 
-        window.location.href = "/proc/agendaTask?code=frameProcAgendaTask";
+        // window.location.href = "/proc/agendaTask?code=frameProcAgendaTask";
     }
 }

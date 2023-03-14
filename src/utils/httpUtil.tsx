@@ -10,6 +10,7 @@ export function getUrl(){
 
   if(url.indexOf("localhost")!=-1){
     return "http://localhost:8081";
+    // return "http://zhflow-admin.scyingneng.com";
   }
 
   return url;

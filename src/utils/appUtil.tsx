@@ -3,7 +3,7 @@ import {removeToken, saveToken} from "./auth";
 import {toast} from "amis-ui";
 
 export async function switchAppToken(appId:string) {
-    const responseData = await httpAwait(getUrl() + "/api/app/switchApp?appId="+appId);
+    const responseData = await httpAwait(getUrl() + "/api/app/switchApp?id="+appId);
     if (responseData.status != 0 && responseData.status != 2) {
         removeToken();
         toast.error(responseData.msg)
