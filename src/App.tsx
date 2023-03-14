@@ -13,7 +13,6 @@ import {AlertComponent, render as renderAmis, ToastComponent} from 'amis';
 import {amisEnv} from "./env";
 import {getPage} from "./utils/auth";
 import {loadAction} from "./actions/RootAction";
-import {getUrlParam} from "./utils/httpUtil";
 
 loadAction();
 
@@ -35,20 +34,28 @@ class AMISComponent extends React.Component<any, any> {
     }
 
     componentDidUpdate() {
-        if(getUrlParam("isDialog")){
+        // if(getUrlParam("isDialog")){
+
+        let lastHeight=0;
+        setInterval(()=>{
             // @ts-ignore
             const height=document.getElementById('root').clientHeight;
-            console.log("clientHeight:"+height)
-            window.parent.postMessage(
-                {
-                    type: 'amis:resize',
-                    data: {
-                        height: height
-                    }
-                },
-                '*'
-            );
-        }
+            if(Math.abs(height-lastHeight)>10){
+                lastHeight=height;
+                window.parent.postMessage(
+                    {
+                        type: 'heightResize',
+                        data: {
+                            height: height
+                        }
+                    },
+                    '*'
+                );
+            }
+
+        },500);
+
+        // }
     }
 
     render() {

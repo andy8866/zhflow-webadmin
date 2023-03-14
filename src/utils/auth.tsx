@@ -1,5 +1,6 @@
 import getIndexJson from "../pages";
 import {getBaseUrl, getUrl, getUrlParam, httpAwait, isFrame, isProcFrame} from "./httpUtil";
+import app from "../App";
 
 
 export function getToken(){
@@ -18,6 +19,10 @@ export function saveUserToken(token:string){
 }
 
 export function getAppToken(){
+    const appToken=getUrlParam("token")
+    console.log("appToken"+appToken)
+    if(appToken) return appToken;
+
     return localStorage.getItem("appToken");
 }
 export function saveAppToken(appToken:string){

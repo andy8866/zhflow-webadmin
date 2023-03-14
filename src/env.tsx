@@ -1,7 +1,15 @@
 // amis 环境配置
 import axios from "axios";
 import {getToken} from "./utils/auth";
-import {getBpmnDesignerUrl, getBpmnViewerUrl, getClientUrl, getUiEditorUrl, getUrl} from "./utils/httpUtil";
+import {
+    getBpmnDesignerUrl,
+    getBpmnViewerUrl,
+    getClientUrl,
+    getUiEditorUrl,
+    getUrl,
+    isFrame,
+    isProcFrame
+} from "./utils/httpUtil";
 
 // @ts-ignore
 console.log(import.meta.env)
@@ -59,7 +67,7 @@ export const amisEnv = {
             console.log('transformResponse')
             console.log(responseJson)
             const responseObj=JSON.parse(responseJson)
-            if(responseObj.status==2){
+            if(responseObj.status==2 && !isFrame() && !isProcFrame()){
                 setTimeout(()=>{
                     location.reload()
                 },2500)
