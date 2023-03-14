@@ -69,7 +69,7 @@ export const amisEnv = {
             const responseObj=JSON.parse(responseJson)
             if(responseObj.status==2 && !isFrame() && !isProcFrame()){
                 setTimeout(()=>{
-                    location.reload()
+                    // location.reload()
                 },2500)
             }
 
