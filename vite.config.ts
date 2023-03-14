@@ -5,11 +5,11 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ command, mode, ssrBuild }) => {
 
     let basePath="";
-    if (command === 'serve') {
-        basePath="/";
-    } else {
-        basePath="/admin";
-    }
+    // if (command === 'serve') {
+    //     basePath="/";
+    // } else {
+    //     basePath="/admin";
+    // }
 
     return {
         plugins: [react()],
@@ -19,6 +19,6 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
         build: {
             assetsDir: "."
         },
-        base: basePath
+        base: "/"
     }
 })
