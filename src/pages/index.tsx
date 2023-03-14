@@ -1,5 +1,5 @@
 import index from "./index.json";
-import {getBaseUrl, getUrl, httpAwait} from "../utils/httpUtil";
+import {getUrl, httpAwait} from "../utils/httpUtil";
 
 export default async function getIndexJson() {
     // @ts-ignore
@@ -9,8 +9,6 @@ export default async function getIndexJson() {
     json = json.replace(/"\$header"/g, JSON.stringify(ui));
 
     json = json.replaceAll(/\$url/g, getUrl());
-
-    json = json.replaceAll(/\$baseUrl/g, getBaseUrl());
 
     console.log(json)
     return JSON.parse(json)

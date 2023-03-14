@@ -1,17 +1,8 @@
 import axios from 'axios';
 import {getToken} from "./auth";
 import {toast} from "amis-ui";
-
-export function getBaseUrl(){
-  // @ts-ignore
-  let baseUrl= import.meta.env.BASE_URL;
-
-  if(baseUrl=="/") return "";
-  return baseUrl;
-}
-
 export function getClientUrl(){
-  return window.location.origin+getBaseUrl();
+  return window.location.origin;
 }
 
 export function getUrl(){
@@ -29,7 +20,7 @@ export function getBpmnDesignerUrl(){
   let url=window.location.origin+"/bpmnDesigner"
 
   if(url.indexOf("localhost")!=-1){
-    return "http://zhflow-dev.scyingneng.com/bpmnDesigner";
+    return "http://zhflow-admin.scyingneng.com/bpmnDesigner";
   }
 
   return url;
@@ -44,7 +35,7 @@ export function getUiEditorUrl(){
   let url=window.location.origin+"/uiEditor"
 
   if(url.indexOf("localhost")!=-1){
-    return "http://zhflow-dev.scyingneng.com/uiEditor";
+    return "http://zhflow-admin.scyingneng.com/uiEditor";
   }
 
   return url;
@@ -74,11 +65,11 @@ export function getUrlParam(paraName:any) {
 }
 
 export function isFrame(){
-  return window.location.pathname==getBaseUrl()+'/frame';
+  return window.location.pathname=='/frame';
 }
 
 export function isProcFrame(){
-  return window.location.pathname==getBaseUrl()+'/procFrame';
+  return window.location.pathname=='/procFrame';
 }
 
 export function httpCallBack(url:any,data:any={},method:any="get",headers:any={},successCallBack:any,failCallBack:any=null){

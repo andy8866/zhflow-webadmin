@@ -1,6 +1,6 @@
 import {ListenerAction, ListenerContext, RendererAction, RendererEvent} from 'amis-core';
 import {saveToken} from "../utils/auth";
-import {getBaseUrl, getUrl, httpCallBack} from "../utils/httpUtil";
+import {getUrl, httpCallBack} from "../utils/httpUtil";
 
 // 动作定义
 interface ISwitchUserAction extends ListenerAction {
@@ -29,7 +29,7 @@ export class SwitchUserAction implements RendererAction {
             const token=v.data
             saveToken(token)
 
-            window.location.href= getBaseUrl()+"/proc/agendaTask?code=frameProcAgendaTask"
+            window.location.href= "/proc/agendaTask?code=frameProcAgendaTask"
         });
     }
 }

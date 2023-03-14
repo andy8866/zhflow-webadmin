@@ -1,6 +1,5 @@
 import getIndexJson from "../pages";
-import {getBaseUrl, getUrl, getUrlParam, httpAwait, isFrame, isProcFrame} from "./httpUtil";
-import app from "../App";
+import {getUrl, getUrlParam, httpAwait, isFrame, isProcFrame} from "./httpUtil";
 
 export function getToken(){
     const token=getUrlParam("token")
@@ -44,10 +43,10 @@ export async function getPage(){
         const validateTokenR=await validateToken()
         if(validateTokenR){
             return getIndexJson()
-        }else if (window.location.pathname==getBaseUrl()+'/login'){
+        }else if (window.location.pathname=='/login'){
             return await httpAwait(getUrl()+'/api/admin/uiPage/getUiByCode?code=login');
         }else{
-            window.location.href=getBaseUrl()+"/login";
+            window.location.href="/login";
         }
     }
 }

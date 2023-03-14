@@ -1,6 +1,5 @@
 import {ListenerAction, ListenerContext, RendererAction, RendererEvent} from 'amis-core';
 import {saveToken} from "../utils/auth";
-import {getBaseUrl} from "../utils/httpUtil";
 import {switchAppToken} from "../utils/appUtil";
 
 // 动作定义
@@ -28,6 +27,6 @@ export class LoginAction implements RendererAction {
 
         await switchAppToken("");
 
-        window.location.href = getBaseUrl()+"/proc/agendaTask?code=frameProcAgendaTask";
+        window.location.href = "/proc/agendaTask?code=frameProcAgendaTask";
     }
 }
