@@ -36,7 +36,7 @@ export function getUiEditorUrl(){
   let url=window.location.origin+"/uiEditor"
 
   if(url.indexOf("localhost")!=-1){
-    return "http://zhflow-admin.scyingneng.com/uiEditor";
+    return "http://zhflow-admin-dev.scyingneng.com/uiEditor";
   }
 
   return url;
