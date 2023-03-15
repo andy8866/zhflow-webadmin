@@ -12,7 +12,8 @@
         {
           "label": "客户意见",
           "url": "/suggest",
-          "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=suggest"
+          "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=suggest",
+          "visible": false
         },
         {
           "label": "用户列表",
