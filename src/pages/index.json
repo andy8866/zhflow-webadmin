@@ -1,6 +1,9 @@
 {
   "type": "app",
   "brandName": "中流",
+  "cssVars": {
+    "--text-color": "#c21010"
+  },
   "header": "$header",
   "pages": [
     {
@@ -36,6 +39,17 @@
           "label": "应用列表",
           "url": "/appList",
           "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=appList"
+        },
+        {
+          "label": "主题管理",
+          "url": "/themeManager",
+          "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=themeManager"
+        },
+        {
+          "label": "主题编辑",
+          "url": "/themeEdit",
+          "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=themeEdit",
+          "visible": false
         },
         {
           "label": "流程",
