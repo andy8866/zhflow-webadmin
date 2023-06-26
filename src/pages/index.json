@@ -22,7 +22,7 @@
           "label": "用户列表",
           "url": "/userList",
           "schemaApi": "$url/api/admin/uiPage/getUiByCode?code=userList",
-          "visible": false
+          "visible": true
         },
         {
           "label": "页面管理",
