@@ -21,7 +21,8 @@ export function getBpmnDesignerUrl(){
   let url=window.location.origin+"/bpmnDesigner"
 
   if(url.indexOf("localhost")!=-1){
-    return "http://zhflow-admin.scyingneng.com/bpmnDesigner";
+    // return "http://zhflow-admin.scyingneng.com/bpmnDesigner";
+    return "http://zhflow-admin-dev.scyingneng.com/bpmnDesigner";
   }
 
   return url;
